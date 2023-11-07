@@ -1,0 +1,83 @@
+{{include './template/header.html'}}
+<link rel="stylesheet" href="/camera.css">
+
+<article class="content-article">
+    <div class="camera-box">
+        <ul id="macy-container" class="imgEnlarge">
+            {{each viewdata.data item}}
+            <li>
+                {{if item.signal != undefined && item.signal != ''}}
+                <div class="signal-lock">
+                    <img src="/icon/lock.png" alt="" class="lock">
+                    <p>此文章加密</p>
+                </div>
+                {{/if}}
+                <div class="describe">
+                    <p>
+                        <time datetime="{{item.dateYY}}-{{item.dateMM}}-{{item.dateDD}}" class="publication-time">
+                            {{item.dateYY}}-{{item.dateMM}}-{{item.dateDD}}
+                        </time>
+                    </p>
+                    <p>
+                        <a href="{{item.url}}" target="_blank" rel="{{item.title}}"
+                            class="title {{if item.signal != undefined && item.signal != ''}}disable{{/if}}">{{item.title}}</a>
+                        {{if item.description != undefined && item.description != ''}}
+                    <p class="text">{{item.description}}</p>
+                    </p>
+                    {{/if}}
+                    <p>
+                        <a href="{{item.url}}" target="_blank" rel="{{item.title}}"
+                            class="continue {{if item.signal != undefined && item.signal != ''}}disable{{/if}}">继续阅读<span>→</span></a>
+                    </p>
+                </div><!-- 标题-时间 -->
+
+                <div class="picture">
+                    {{if item.img != undefined && item.img != ''}}
+                    <p><img src="{{item.img}}" alt="{{item.title}}"></p>
+                    {{else if item.video != undefined && item.video != ''}}
+                    <p>
+                        <video controls muted preload="auto" autoplay poster="/icon/loading.gif">
+                            <source src="{{item.video}}" type="video/mp4">
+                            您的浏览器不支持 video 标签。
+                        </video>
+                    </p>
+                    {{/if}}
+                </div><!-- 视频-图片 -->
+
+                <div class="info">
+                    {{if item.placeMap != undefined && item.placeMap != ''}}
+                    <span>
+                        <img src="/icon/placeMap.png" class="icon">
+                        {{item.class}}&ensp;{{item.placeMap}}
+                    </span>
+                    {{/if}}
+                    <span>
+                        <a href="{{item.url}}#pstalk" target="_blank" rel="{{item.title}}"
+                            class="{{if item.signal != undefined && item.signal != ''}}disable{{/if}}">
+                            <img src="/icon/comment-icon.png" class="icon">
+                            评论
+                        </a>
+                    </span>
+                </div><!-- 信息-日期 -->
+
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    {{include './template/components/pagingPage.html'}}
+</article>
+<aside class="right-aside">
+    {{include './template/components/LabelTag.html'}}
+    {{include './template/components/Latest.html'}}
+    {{include './template/components/meMy.html'}}
+    {{include './template/components/account.html'}}
+    <!-- include './template/components/works.html' -->
+    {{include './template/components/message.html'}}
+    {{include './template/components/FriendlyLink.html'}}
+    {{include './template/components/WebsiteInformation.html'}}
+</aside>
+{{include './template/footer.html'}}
+
+<div>
+
+</div>

@@ -1,0 +1,48 @@
+{{include './template/header.html'}}
+<link rel="stylesheet" href="/placeonfile.css">
+<article class="content-article">
+  <section class="placeonfile-box">
+    <h3 class="title" style="margin-top: 1.5rem;">归档</h3>
+    <div class="Archive-classification">
+      {{if viewdata.data == ''}}
+      <section class="">
+        <a href="/" class="empty">
+          <img src="/icon/empty.png" width="200px" alt="">
+          <p>暂无数据~看看其它吧</p>
+        </a>
+      </section>
+      {{else}}
+      {{each viewdata.Year item1}}
+      <h3>{{item1}}</h3>
+      <ul style="margin-bottom: 60px;">
+        {{each viewdata.data item2}}
+        {{if item1 == item2.dateYY}}
+        <li><a href="/{{item2.url}}" target="_blank" title="{{item2.title}}" rel="{{item2.title}}">
+            <div>
+              <span><time
+                  datetime="{{item2.dateYY}}-{{item2.dateMM}}-{{item2.dateDD}}">{{item2.dateMM}}-{{item2.dateDD}}</time>&ensp;</span>
+              {{item2.title}}
+            </div>
+          </a>
+        </li>
+        {{/if}}
+        {{/each}}
+      </ul>
+      {{/each}}
+      {{/if}}
+    </div>
+  </section>
+</article>
+
+<aside class="right-aside">
+  {{include './template/components/LabelTag.html'}}
+  {{include './template/components/Latest.html'}}
+  {{include './template/components/meMy.html'}}
+  {{include './template/components/account.html'}}
+  <!-- include './template/components/works.html' -->
+  {{include './template/components/message.html'}}
+  {{include './template/components/FriendlyLink.html'}}
+  {{include './template/components/WebsiteInformation.html'}}
+</aside>
+
+{{include './template/footer.html'}}

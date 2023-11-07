@@ -1,0 +1,59 @@
+<blockquote>
+<p>注意：本博客尚未开源，此文章仅作为笔记记录</p>
+</blockquote>
+<h4 id="软件架构">软件架构</h4>
+<p>后端：Node.js + Express</p>
+<h4 id="安装教程">安装教程</h4>
+<pre><code class="language-JavaScript">npm i // 安装依赖
+nodemon .\app.js // 运行
+node .\build.js // 打包
+</code></pre>
+<h4 id="主页">主页</h4>
+<p><a href="https://zhangchengwei.work">zhangchengwei.work</a></p>
+<h4 id="使用说明">使用说明</h4>
+<p>文章：</p>
+<ol>
+<li><p>新建分类：</p>
+<p> 在Article/md/article/目录下新建文件夹</p>
+<blockquote>
+<p>必须以序号+下划线开头<code>1_分类名称</code></p>
+</blockquote>
+</li>
+<li><p>新建文章</p>
+<p> 例如我创建了一个序号为2的css分类文件夹<code>2_css</code>，路径是这样：<code>Article/md/article/2_css/</code></p>
+<p> 在这个路径下新建.md文件，必须以序号+下划线开头，比如我创建一篇为我的第一篇博客。其路径是这样的：<code>Article/md/article/2_css/1_我的第一篇博客.md</code></p>
+<p> 生成的url为：域名+/article/css-1</p>
+<blockquote>
+<p>注意这个新建文章的序号，非必要不要修改，文章生成的是以这个序号生成的，修改序号，url也会相应自动更改，如果你不想影响SEO的话，不建议修改，当然在网站还没被收录时，请随意。</p>
+</blockquote>
+</li>
+<li><p>md文章的修改：</p>
+</li>
+</ol>
+<p>打开1_我的第一篇博客.md文件，可以使用Typora或者VSCode编辑md内容</p>
+<p>注意md内容必须要以下内容，即用<code>&lt;!--## ##--&gt;</code>包裹的json内容，必须放在前面。在<code>##--&gt;</code>后面可以编写内容</p>
+<p>编写标题最好使用 h3至h4，生成的目录只展示h3至h4。</p>
+<blockquote>
+<p>description：文章的描述</p>
+<p>tag：数组类型，标签，最好三个标签以内</p>
+<p>img：文章首图</p>
+<p>dateYY：年；dateMM：月；dateDD：日；</p>
+<p>top：是否显示该文章</p>
+</blockquote>
+<pre><code class="language-markdown">&lt;!--##{
+    &quot;description&quot;: &quot;文章的描述&quot;,
+    &quot;tag&quot;: [
+    &quot;css&quot;,
+    &quot;html&quot;
+    ],
+    &quot;img&quot;:&quot;/Markdown.png&quot;,
+    &quot;dateYY&quot;: &quot;2023&quot;,
+    &quot;dateMM&quot;: &quot;05&quot;,
+    &quot;dateDD&quot;: &quot;24&quot;,
+    &quot;top&quot;: true
+}##--&gt;
+</code></pre>
+<h4 id="参与贡献">参与贡献</h4>
+<ol>
+<li>XXX</li>
+</ol>

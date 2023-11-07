@@ -1,0 +1,57 @@
+{{if viewdata.total != '' && viewdata.total != "1"}}
+<section class="pagingPage">
+  <ul>
+    {{if viewdata.querypage > 4}}
+    <li><a href="{{viewdata.getnav}}?key={{viewdata.key}}&column=<%= viewdata.column %>&page=1">1</a></li>
+    {{/if}}
+    <!-- 超数、第一页 -->
+
+    {{if viewdata.querypage <= 4}} <li class="disabled">
+      <a href="{{viewdata.getnav}}?key={{viewdata.key}}&column={{viewdata.column}}&page={{viewdata.querypage - 1}}"
+        class="switch">
+        <span class="left">←</span></a> </li>
+      {{else}}
+      <li>
+        <a href="{{viewdata.getnav}}?key={{viewdata.key}}&column={{viewdata.column}}&page={{viewdata.querypage - 1}}"
+          class="switch">
+          <span class="left">←</span></a>
+      </li>
+      {{/if}}<!-- 上一页 -->
+
+      {{if viewdata.total > 4}}
+      {{set maxval = 4}}
+      {{else}}
+      {{set maxval = viewdata.total}}
+      {{/if}}
+
+      <% for(var i=1 + viewdata.numsturning; i<=maxval+ viewdata.numsturning; i++) {%>
+        {{if i == viewdata.querypage}}
+        <li class="active"><a
+            href="{{viewdata.getnav}}?key={{viewdata.key}}&column=<%= viewdata.column %>&page=<%= i %>">{{i}}</a></li>
+        {{else}}
+        <li><a href="{{viewdata.getnav}}?key={{viewdata.key}}&column=<%= viewdata.column %>&page=<%= i %>">{{i}}</a>
+        </li>
+        {{/if}}
+        <% }%><!-- 中间切换 -->
+
+          {{if viewdata.querypage >= viewdata.total || viewdata.total <= 4}} <li class="disabled">
+            <a href="{{viewdata.getnav}}?key={{viewdata.key}}&column={{viewdata.column}}&page={{viewdata.querypage - 0 + 1}}"
+              class="switch">
+              <span class="right">→</span></a>
+            </li>
+            {{else}}
+            <li>
+              <a href="{{viewdata.getnav}}?key={{viewdata.key}}&column={{viewdata.column}}&page={{viewdata.querypage - 0 + 1}}"
+                class="switch">
+                <span class="right">→</span></a>
+            </li>
+            {{/if}}<!-- 下一页 -->
+
+            {{if viewdata.total > 4 && viewdata.total != viewdata.querypage}}
+            <li><a
+                href="{{viewdata.getnav}}?key={{viewdata.key}}&column=<%= viewdata.column %>&page=<%= viewdata.total %>">{{viewdata.total}}</a>
+            </li>
+            {{/if}}<!-- 超数、最后一页 -->
+  </ul>
+</section><!-- 分页 -->
+{{/if}}

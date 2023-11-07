@@ -1,0 +1,166 @@
+/* 底部信息 */
+.blog-footer {
+  margin-top: 60px;
+  background-color: var(--theme-background-footer);
+}
+
+.footer-content {
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 767.98px) {
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+  }
+}
+
+/* logo */
+.footer-logo {
+  margin: 0 20px;
+  opacity: 0.9;
+}
+
+@media (max-width: 767.98px) {
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+}
+
+.footer-logo a {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo p {
+  color: var(--theme-color-blog-nav);
+  font-size: 20px;
+  font-weight: 550;
+  font-family: '宋体';
+  white-space: nowrap;
+}
+
+.footer-logo img {
+  width: 30px;
+  height: 30px;
+}
+
+/* 链接 */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 20px;
+}
+
+@media (max-width: 767.98px) {
+  .footer-nav {
+    align-items: center;
+  }
+}
+
+.top-footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.top-footer li a {
+  font-size: 12px;
+  line-height: 24px;
+  color: var(--theme-color-6);
+  margin: 0 6px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.top-footer li a:hover {
+  text-decoration: underline;
+}
+
+.top-footer li input {
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  line-height: 24px;
+  color: var(--theme-color-6);
+  margin: 0 6px;
+  line-height: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.top-footer li input:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 767.98px) {
+  .top-footer li {
+    width: 50%;
+    text-align: center;
+  }
+}
+
+.bottom-footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767.98px) {
+  .bottom-footer {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.bottom-footer li {
+  line-height: 16px;
+}
+
+.bottom-footer li a {
+  font-size: 10px;
+  margin: 0 4px;
+  color: #8e8787 !important;
+  white-space: nowrap;
+}
+
+/* 底部信息end */
+
+/* 置顶按钮 */
+.topping {
+  width: 33px;
+  height: 33px;
+  line-height: 33px;
+  font-size: 15px;
+  color: #999;
+  text-align: center;
+  background-color: var(--theme-blockquote-back);
+  position: fixed;
+  bottom: 6rem;
+  right: 2rem;
+  z-index: 999999;
+  cursor: pointer;
+  display: none;
+  transition: all 0.5s ease;
+  animation: Topping 0.5s;
+}
+
+@keyframes Topping {
+  0% {
+    transform: scale(0);
+    right: 0;
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1);
+    right: 2rem;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,94 @@
+{{include './template/header.html'}}
+<link rel="stylesheet" href="/notesbook.css">
+<article class="content-article">
+  <section class="placeonfile-box">
+    <ul class="list-booknav">
+      <li class="{{if viewdata.column == ''}}active{{/if}}">
+        <a href="{{getnavLink}}" rel="全部" title="全部">
+          全部
+        </a>
+      </li>
+      {{each viewdata.class item}}
+      <li class="{{if viewdata.column == item}}active{{/if}}"><a href="/notesbook?key=class&column={{item}}"
+          rel="{{item}}">{{item}}</a></li>
+      {{/each}}
+    </ul>
+    <ul class="list-bookitem">
+      {{if viewdata.data == ''}}
+      <section class="">
+        <a href="/" class="empty">
+          <img src="/icon/empty.png" width="200px" alt="">
+          <p>暂无数据~看看其它吧</p>
+        </a>
+      </section>
+      {{else}}
+      {{each viewdata.data item1}}
+      <li>
+        <a href="/{{item1.url}}" rel="{{item1.title}}" target="_blank" title="{{item1.title}}">
+          <div class="picture">
+            <img src="{{item1.img}}" alt="{{item1.url}}" title="{{item1.title}}">
+            <span></span>
+          </div>
+        </a>
+        <div class="describe">
+          <a href="/{{item1.url}}" rel="{{item1.title}}" target="_blank" title="{{item1.title}}">
+            <h2>{{item1.title}}</h2>
+          </a>
+          <div class="describe-text">{{item1.description}}</div>
+          <div>
+            <p class="date">
+              <time datetime="{{item1.dateYY}}-{{item1.dateMM}}-{{item1.dateDD}}"
+                class="publication-time">{{item1.dateYY}}-{{item1.dateMM}}</time>&ensp;阅
+            </p>
+            <div class="tag-box">
+              <div>
+                <img src="/icon/tag-icon.png" alt="标签-分类">
+                <a href="/notesbook?key=class&column={{item1.class}}" rel="{{item1.class}}">
+                  <span>{{item1.class}}</span>
+                </a>
+                {{each item1.tag item2}}
+                <a href="/notesbook?key=tag&column={{item2}}" rel="{{item2}}">
+                  <span>#&ensp;{{item2}}</span>
+                </a>
+                {{/each}}
+              </div>
+              <a href="/{{item1.url}}" rel="{{item1.title}}" target="_blank" title="{{item1.title}}"
+                class="more-button">
+                <p>全文..》</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        </a>
+      </li>
+      {{/each}}
+      {{/if}}
+    </ul>
+    {{include './template/components/pagingPage.html'}}
+
+    <div class="tooltips-txt" style="margin-top:60px;color: var(--theme-color-6);line-height:1.8;">
+      <p>这里纪录我所看过的书籍、电影、纪录片、以及一些笔记等。</p>
+      <p>似乎还有很多以前看过的电影、书籍等，已经记不大清了。</p>
+      <p>为什么开设这个栏目！</p>
+      <p>因为想把一些自认为好看的东西记录下来，与大家分享。</p>
+      <p>如有推荐可以在留言区留言，感谢分享。</p>
+      <p>&#x2193;底部留言或联系<a href="mailto:zhangchengwei.work@outlook.com" style="color: var(--theme-color-a);">我的邮箱</a>
+      </p>
+    </div>
+
+  </section>
+  {{include './template/components/pstalk.html'}}
+</article>
+
+<aside class="right-aside">
+  {{include './template/components/LabelTag.html'}}
+  {{include './template/components/Latest.html'}}
+  {{include './template/components/meMy.html'}}
+  {{include './template/components/account.html'}}
+  <!-- include './template/components/works.html' -->
+  {{include './template/components/message.html'}}
+  {{include './template/components/FriendlyLink.html'}}
+  {{include './template/components/WebsiteInformation.html'}}
+</aside>
+
+{{include './template/footer.html'}}

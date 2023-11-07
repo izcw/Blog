@@ -1,0 +1,10 @@
+<ul>
+  {{each info.contact item}}
+  <li class="{{item.name}}">
+    <a href="{{item.link}}" target="_blank" rel="{{item.text}}" title="{{item.text}}">
+      <img src="{{item.icon1}}" class="icon1" alt="{{item.text}}" title="{{item.text}}">
+      <img src="{{item.icon2}}" class="icon2" alt="{{item.text}}" title="{{item.text}}">
+    </a>
+  </li>
+  {{/each}}
+</ul>

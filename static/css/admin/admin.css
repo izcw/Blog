@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* 左边 */
+.box-left {
+  width: 200px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.box-left .navlogo-div {
+  width: 100%;
+}
+
+/* 导航 */
+.box-left .nav {
+  width: 100%;
+  margin: 60px 0;
+}
+
+.box-left .nav li {
+  width: 100%;
+  margin: 2px 0;
+}
+
+.box-left .nav li a {
+  width: 100%;
+  padding: 6px 0;
+  display: block;
+  font-size: 16px;
+  color: #333;
+  border-left: 3px solid transparent;
+  padding-left: 1rem;
+  line-height: 28px;
+}
+
+.box-left .nav li a.active {
+  font-weight: bold;
+  background-color: #ededeb;
+  border-left: 3px solid #999;
+}
+
+.box-left .nav li a:hover {
+  font-weight: bold;
+  background-color: #e8e8e5;
+  border-left: 3px solid #dfdfdc;
+}
+
+/* 导航end */
+/* 左侧logo */
+.box-left .logo {
+  margin: 30px 0;
+}
+
+.box-left .logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-left .logo a img {
+  width: 30px;
+  height: 30px;
+}
+
+.box-left .logo a p {
+  color: #000;
+  font-size: 20px;
+  font-weight: 550;
+  font-family: '宋体';
+  white-space: nowrap;
+}
+
+/* 左侧logo  end */
+
+.box-left .foot p {
+  font-size: 12px;
+  color: #666;
+}
+
+.box-left .foot p .foot-v {
+  font-size: 14px;
+  color: #333;
+}
+
+.box-left .foot p .foot-new {
+  color: #c9111c;
+  font-weight: bold;
+}
+
+/* 左边end */
+
+/* 右边 */
+.box-right {
+  width: 100%;
+  background-color: #f7f8f9;
+  overflow-y: auto;
+}
+
+.box-right .banner-box {
+  height: 220px;
+  background-color: #f1f1f1;
+  background-image: url(banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 卡片盒子 */
+.box-right .card-box {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.box-right .card-boxList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 卡片列表 */
+.box-right .card-item {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 25%;
+}
+
+.box-right .card-item .card-item-div {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #333;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+/* 右边end */

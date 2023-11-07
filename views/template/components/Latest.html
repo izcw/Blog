@@ -1,0 +1,59 @@
+<style>
+  .articles-box ul {
+    margin-bottom: 0.6rem !important;
+  }
+
+  .articles-box ul li {
+    line-height: 1 !important;
+  }
+
+  .articles-box ul li a {
+    font-size: 16px;
+    color: var(--theme-sspai-p) !important;
+    padding: 6px 6px 6px 0;
+    text-decoration: none !important;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .articles-box ul li a:hover {
+    color: #00a1d6;
+    padding-left: 6px;
+  }
+
+  .articles-box ul li a span {
+    color: #999;
+  }
+
+  .blog-h3 a {
+    text-decoration: none !important;
+    color: var(--theme-color-7) !important;
+  }
+</style>
+<section class="section-box padding-remove">
+  <p class="blog-h3">最近文章<a href="/archives" rel="归档">更多》》</a></p>
+  <div class="articles-box">
+    <ul>
+      {{each contentData.article.datalist item ind}}
+      {{if ind < 2}} <li> <a href="/{{item.url}}" rel="{{item.title}}">{{item.title}}<span>「文章」</span></a></li>
+        {{/if}}
+        {{/each}}
+    </ul><!-- 技术/文章 -->
+    <ul>
+      {{each contentData.notesbook.datalist item ind}}
+      {{if ind < 2}} <li><a href="/{{item.url}}" rel="{{item.title}}">{{item.title}}<span>「{{item.class}}」</span></a>
+        </li>
+        {{/if}}
+        {{/each}}
+    </ul><!-- 读书/观影 -->
+    <ul>
+      {{each contentData.camera.datalist item ind}}
+      {{if ind < 2}}<li><a href="/{{item.url}}" rel="{{item.title}}">{{item.title}}<span>「光影集」</span></a></li>
+        {{/if}}
+        {{/each}}
+    </ul><!-- 光影集 -->
+  </div>
+</section><!-- 最新文章 -->

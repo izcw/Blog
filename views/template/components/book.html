@@ -1,0 +1,15 @@
+<section class="book-noets section-box">
+  <p class="blog-h3">我的笔记小册<a href="/notesbook" rel="更多笔记小册" title="更多笔记小册">更多&nbsp》》</a></p>
+  <div class="book-noets-box">
+    {{each notesbook item}}
+    {{if item.top == true}}
+    <div class="book-noets-item">
+      <a href="{{item.link}}" rel="{{item.name}}" title="{{item.name}}">
+        <img src="{{item.img}}" alt="{{item.link}}" title="{{item.name}}">
+        <p>{{item.name}}</p>
+      </a>
+    </div>
+    {{/if}}
+    {{/each}}
+  </div>
+</section><!-- 我的笔记小册 -->

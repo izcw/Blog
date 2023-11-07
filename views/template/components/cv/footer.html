@@ -1,0 +1,35 @@
+<script>
+    // 下载
+    function download() {
+        var url = 'https://picserver.duoyu.link/picfile/application/202306/26-1687750884581.pdf';
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true); // 异步
+        xhr.responseType = 'blob'; // blob 类型
+        xhr.onload = function () {
+            if (xhr.status != 200) {
+                alert('下载异常！');
+                return;
+            }
+            if (window.navigator.msSaveOrOpenBlob) {
+                // IE
+                navigator.msSaveBlob(xhr.response, filename);
+            } else {
+                var newUrl = window.URL.createObjectURL(xhr.response);
+                var a = document.createElement('a');
+                a.setAttribute('href', newUrl);
+                a.setAttribute('target', '_blank');
+                a.setAttribute('download', '张成威17877059806.pdf'); // 自定义文件名（有效）
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
+        };
+        xhr.send();
+    }
+</script>
+<footer>
+    <a href="">{{info.copyright}}</a>/<a href="/">About主页</a>/<a href="{{info.abouturl}}">关于作者</a>
+</footer>
+</body>
+
+</html>

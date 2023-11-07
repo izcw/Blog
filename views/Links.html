@@ -1,0 +1,52 @@
+{{include './template/header.html'}}
+<link rel="stylesheet" href="/links.css">
+<article class="content-article">
+  <section class="placeonfile-box">
+    <h3 class="title" style="margin-top: 1.5rem;">友情链接</h3>
+    {{each viewdata.class item1}}
+    <div class="friend-item">
+      <strong>{{item1.name}}</strong>
+      <ul>
+        {{each viewdata.datalist item2}}
+        {{if item2.class == item1.class}}
+        <li>
+          <a href="{{item2.link}}" target="_blank" rel="{{item2.name}}" title="{{item2.name}} - {{item2.motto}}">
+            <p class="friend-name">{{item2.name}}</p>
+          </a>
+        </li>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+    {{/each}}
+    <div class="tooltips-txt">
+      <p>PS：交个朋友！</p>
+      <p>排名不分先后</p>
+      <p>很高兴能和非常多的朋友们交流</p>
+      <br />
+      <p style="font-weight: bold;">我的博客信息：</p>
+      <p>站点名称：张成威的网络日志</p>
+      <p>站点地址：<a href="https://www.zhangchengwei.work">https://www.zhangchengwei.work</a></p>
+      <p>站点描述：知不足而奋进，望远山而前行</p>
+      <p>站点图标：https://www.zhangchengwei.work/logo.png</p>
+      <br />
+      <p style="font-weight: bold;">留言格式：</p>
+      <p>站点名称（必要）</p>
+      <p>站点地址（必要）</p>
+      <p>站点描述（必要）</p>
+      <p>站点图标（非必要）</p>
+      <br />
+      <p>由于我的友链界面设计比较简洁，不会显示头像，望见谅。</p>
+      <p>&#x2193;底部留言-或-通过右下角的聊天窗口与我联系。或者联系<a href="mailto:zhangchengwei.work@outlook.com"
+          rel="我的邮箱zhangchengwei.work@outlook.com">我的邮箱</a></p>
+    </div>
+  </section>
+  {{include './template/components/pstalk.html'}}
+</article>
+<aside class="right-aside">
+  {{include './template/components/meMy.html'}}
+  <!-- include './template/components/works.html' -->
+  {{include './template/components/Latest.html'}}
+  {{include './template/components/account.html'}}
+</aside>
+{{include './template/footer.html'}}

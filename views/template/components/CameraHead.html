@@ -1,0 +1,23 @@
+<div class="camerainfo">
+    <p>地点：<span>{{viewdata.class}}&ensp;{{viewdata.placeMap}}</span></p>
+    <p>时间：<span>{{viewdata.dateYY}}年{{viewdata.dateMM}}月{{viewdata.dateDD}}日&ensp;</span>{{viewdata.dateAMPM}}</p>
+    <p>器材：<span>{{viewdata.device}}</span></p>
+    {{if viewdata.itinerary != ''}}<p>路线：<span>{{viewdata.itinerary}}</span></p>{{/if}}
+    <div style="width: 60px;height: 1px;background-color:var(--border-border-bottom-articleitem);margin: 20px 0;"></div>
+</div>
+<p>{{viewdata.description}}</p>
+<div>
+    {{if viewdata.img != undefined && viewdata.img != ''}}
+    <p class="camera-img-item">
+        <img src="{{viewdata.img}}">
+        <span>{{viewdata.tag[0]}}</span>
+    </p>
+    {{else if viewdata.video != undefined && viewdata.video != ''}} 
+    <p class="camera-img-item">
+        <video width="320" height="240" autoplay controls preload="auto" muted>
+            <source src="{{viewdata.video}}" type="video/mp4">
+            您的浏览器不支持 video 标签。
+        </video><span>{{viewdata.tag[0]}}</span>
+    </p>
+    {{/if}}
+</div>

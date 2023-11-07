@@ -1,0 +1,101 @@
+/* 定义根作用域下的变量 */
+:root {
+    --theme-banner: url(/banner/banner7.jpg);
+    /* 反色 */
+    --filter-color: invert(0%);
+    /* 文字颜色 */
+    --theme-color: #444;
+    --theme-color-a: #00a1d6;
+    --theme-color-6: #666;
+    --theme-color-7: #777;
+    --theme-color-9: #999;
+    --theme-h1-color: #292525;
+    --theme-h2-color: #444;
+    --theme-h3-color: #1d2129;
+    --theme-color-banner: #739840;
+    --theme-color-blog-nav: #000;
+    --theme-color-blog-nav2: #000;
+    --theme-sspai-h1: #333;
+    --theme-sspai-h23456: #333;
+    --theme-sspai-p: #222;
+    --theme-blockquote-p: #666;
+    --theme-blockquote-border: #222;
+    --theme-blockquote-back: #eee;
+    --tag-span-action:#e8e8e8;
+    /* 背景 */
+    --theme-background: #f9f9f9;
+    --theme-background-blog-header: #ffffff;
+    --theme-background-footer: #fff;
+    --theme-background-article: #fff;
+    --theme-background-articleitem: #fff;
+    --theme-label-tag: #f4f4f4;
+    --theme-label-tag-text: #666;
+    --theme-label-tag-text-action: #666;
+    --theme-label-tag-action: #e4e4e4;
+    --theme-label-precode-back: #272822;
+    --tag-span:#f5f5f5;
+    /* 边框 */
+    --border-border-bottom-articleitem: #eee;
+    --border-color: #eee;
+    --loading-back: #000;
+    /* 显示隐藏 */
+    --theme-bamboodisplay: block;
+
+    --background-image: radial-gradient(transparent 1px, #fff 1px);
+    --filter: saturate(50%) blur(15px);
+}
+
+/* 更改dark类名下变量的取值 */
+.dark {
+    --theme-banner: url(/banner/bn2.jpg);
+    /* 反色 */
+    --filter-color: invert(100%);
+    /* 文字颜色 */
+    --theme-color: #fff;
+    --theme-color-a: #00a1d6;
+    --theme-color-6: #ccc;
+    --theme-color-7: #ccc;
+    --theme-color-9: #999;
+    --theme-h1-color: #fff;
+    --theme-h2-color: #fff;
+    --theme-h3-color: #fff;
+    --theme-color-banner: #fff;
+    --theme-color-blog-nav: #fff;
+    --theme-color-blog-nav2: #228e6c;
+    --theme-sspai-h1: #eee;
+    --theme-sspai-h23456: #e4e4e6;
+    --theme-sspai-p: #d4d4d4;
+    --theme-blockquote-p: #d4d4d4;
+    --theme-blockquote-border: #cfc9c4;
+    --theme-blockquote-back: #243143;
+    /* 背景 */
+    --theme-background: #0f172a;
+    --theme-background-blog-header: #1a2436;
+    --theme-background-footer: #1e293b;
+    --theme-background-article: #0f172a;
+    --theme-background-articleitem: #1e293b;
+    --theme-label-tag: #243143;
+    --theme-label-tag-text: #228e6c;
+    --theme-label-tag-text-action: #fff;
+    --theme-label-tag-action: #228e6c;
+    --theme-label-precode-back: #181818;
+    --tag-span:#243143;
+    --tag-span-action:#228e6c;
+
+    /* 边框 */
+    --border-border-bottom-articleitem: #1a2436;
+    --border-color: #313132;
+    --loading-back: #fff;
+    /* 显示隐藏 */
+    --theme-bamboodisplay: none;
+
+    --background-image: none;
+    --filter: 0;
+}
+
+/* 主题切换按钮 */
+.toggle {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}

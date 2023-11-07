@@ -1,0 +1,65 @@
+<section class="finditem-box">
+    <ul class="finditem-box-ul">
+        {{each contentData item1}}
+        {{each item1.datalist item2}}
+        <li class="finditem">
+            <a href="/{{item2.url}}" rel="{{item2.title}}" target="_blank"
+                style="text-decoration:underline;color: var(--theme-color-a);">{{item2.title}}</a>
+            <a href="/{{item2.url}}" rel="{{item2.title}}" target="_blank"
+                style="display: -webkit-box;  overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; color: var(--theme-color-7);font-size: 14px;padding-top: 3px;">{{item2.description}}</a>
+            <div class="findtag">
+                <a href="{{item1.url}}?key=class&column={{item2.class}}" target="_blank" rel="{{item2.class}}"
+                    style="margin-right:1rem;">
+                    ${{item2.class}}
+                </a>
+                {{each item2.tag tag}}
+                <a href="{{info.url}}/{{item1.name}}?key=tag&column={{tag}}" target="_blank" rel="{{tag}}">
+                    #{{tag}}
+                </a>
+                {{/each}}
+            </div>
+        </li>
+        {{/each}}
+        {{/each}}
+    </ul>
+</section>
+
+<section class="label section-box" style="margin-top: 60px;">
+    <p class="blog-h3">分类</p>
+    <nav class="label-tag">
+        <ul>
+            <li>
+                <a href="{{getnav}}" class="{{if viewdata.column == ''}}action{{/if}}" target="_blank" rel="全部文章"
+                    title="全部文章">
+                    全部文章
+                </a>
+            </li>
+            {{each contentData item1}}
+            {{each item1.class item2}}
+            <li>
+                <a href="{{item1.url}}?key=class&column={{item2}}" target="_blank"
+                    class="{{if viewdata.column == item2}}action{{/if}}" rel="{{item2}}">
+                    {{item2}}
+                </a>
+            </li>
+            {{/each}}
+            {{/each}}
+
+        </ul>
+    </nav>
+    <p class="blog-h3">标签</p>
+    <nav class="label-tag">
+        <ul>
+            {{each contentData item1}}
+            {{each item1.tag item2}}
+            <li>
+                <a href="{{item1.url}}?key=tag&column={{item2}}" target="_blank"
+                    class="{{if viewdata.column == item2}}action{{/if}}" rel="{{item2}}">
+                    {{item2}}
+                </a>
+            </li>
+            {{/each}}
+            {{/each}}
+        </ul>
+    </nav>
+</section><!-- 标签 -->

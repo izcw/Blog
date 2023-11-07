@@ -1,0 +1,210 @@
+/* 导航 */
+.content-article .list-booknav {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  margin: 30px 0;
+  transition: all 0.5s ease;
+}
+
+.content-article .list-booknav li {
+  position: relative;
+}
+
+.content-article .list-booknav li.active a {
+  position: relative;
+  font-weight: bold;
+  color: var(--theme-color);
+}
+
+.content-article .list-booknav li.active::after {
+  display: block;
+  content: "";
+  width: calc(100% - 40px);
+  height: 3px;
+  background-color: #999;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.content-article .list-booknav li a {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 10px 20px;
+  color: var(--theme-color-7);
+  white-space: nowrap;
+  font-size: 16px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.content-article .list-booknav li a:hover {
+  color: var(--theme-color);
+}
+
+/* 列表 */
+.list-bookitem li {
+  margin: 20px 0;
+  box-sizing: border-box;
+  height: 190px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  border: 2px dotted var(--border-color);
+  border-bottom: 3px dotted var(--border-color);
+  transition: all 0.5s ease;
+}
+
+.list-bookitem li:hover {
+  border-bottom: 3px solid var(--border-color);
+}
+
+/* 图片 */
+.list-bookitem li .picture {
+  width: 110px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.list-bookitem li .picture span {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, hsla(0, 0%, 63.1%, .25), rgba(21, 21, 20, .1) 1%, hsla(0, 0%, 100%, .15) 4%, hsla(0, 0%, 58%, .1) 8%, hsla(0, 0%, 89%, 0) 57%, rgba(223, 218, 218, .03) 91%, rgba(223, 218, 218, .05) 98%, hsla(0, 0%, 100%, .1));
+  box-shadow: inset 0 0 0 0 rgba(0, 0, 0, .1);
+  position: absolute;
+}
+
+.list-bookitem li img {
+  border-radius: 1px 2px 2px 1px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+.list-bookitem li img::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+
+}
+
+/* 描述文字 */
+.list-bookitem li .describe {
+  width: calc(100% - 110px);
+  height: 100%;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 767.98px) {
+  .list-bookitem li .describe {
+    padding-left: 1rem;
+    padding-right: 0;
+  }
+}
+
+.list-bookitem li .describe h2 {
+  max-width: 380px;
+  font-size: 17px;
+  color: var(--theme-h3-color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.list-bookitem li .describe h2:hover {
+  color: #02a2d6;
+}
+
+.list-bookitem li .describe .describe-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--theme-color-7);
+  margin: 6px 0;
+  font-weight: 500;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+@media (max-width: 767.98px) {
+  .list-bookitem li .describe .describe-text {
+    -webkit-line-clamp: 2;
+  }
+
+}
+
+.list-bookitem li .describe .date {
+  color: #b3b3b3;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.list-bookitem li .describe .tag-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 767.98px) {
+  .list-bookitem li .describe .tag-box {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.list-bookitem li .describe .tag-box img {
+  width: 12px;
+  height: 12px;
+}
+
+.list-bookitem li .describe .tag-box a {
+  color: #b3b3b3;
+  font-size: 12px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.list-bookitem li .describe .tag-box a:hover {
+  color: #333;
+}
+
+@media (max-width: 767.98px) {
+  .list-bookitem li .describe .tag-box .more-button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.list-bookitem li .describe .tag-box .more-button p {
+  background-color: var(--theme-label-tag);
+  padding: 4px 10px;
+  font-size: 12px;
+  transform: scale(0.9);
+  color: var(--theme-label-tag-text);
+  white-space: nowrap;
+  transition: all 0.5s ease;
+}
+
+.list-bookitem li .describe .tag-box .more-button p:hover {
+  background-color: var(--theme-label-tag-action);
+  color: #fff;
+}

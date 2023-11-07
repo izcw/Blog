@@ -1,0 +1,101 @@
+<style>
+    .next-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border-border-bottom-articleitem);
+    }
+
+    .next-box a {
+        width: 50%;
+        text-decoration: none !important;
+        box-sizing: border-box;
+    }
+
+    .next-box a:hover .p1 {
+        opacity: 0.6;
+    }
+
+    .next-box a:hover .p2 {
+        opacity: 1;
+    }
+
+
+    .next-box a div {
+        transition: all 0.3s ease;
+    }
+
+    .next-box a p {
+        transition: all 0.3s ease;
+    }
+
+    .next-box a .p1 {
+        font-size: 14px !important;
+    }
+
+    .next-box a .p2 {
+        opacity: 0.6;
+        font-size: 16px !important;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .next-box a.left {
+        text-align: left;
+        padding-right: 1rem;
+    }
+
+    .next-box a.left div:hover {
+        margin-left: 6px;
+    }
+
+    .next-box a.right {
+        text-align: right;
+        padding-left: 1rem;
+    }
+
+    .next-box a.right div:hover {
+        margin-right: 6px;
+    }
+</style>
+<div class="section-box">
+    <div class="next-box">
+        {{if next == ""}}
+        <a href="/{{if viewdata.column == 'article'}}archives{{else if viewdata.column != 'article'}}{{viewdata.column}}{{/if}}"
+            class="left">
+            <div>
+                <p class="p1">没有更多了</p>
+                <p class="p2">点击返回文章分类列表</p>
+            </div>
+        </a>
+        {{else if next != ""}}
+        <a href="/{{next.url}}" rel="{{next.title}}" title="{{next.title}}" class="left">
+            <div>
+                <p class="p1">上一篇</p>
+                <p class="p2">{{next.title}}</p>
+            </div>
+        </a>
+        {{/if}}  
+
+        <!--  -->
+
+        {{if prev == ""}}
+        <a href="/{{if viewdata.column == 'article'}}archives{{else if viewdata.column != 'article'}}{{viewdata.column}}{{/if}}"
+            class="right">
+            <div>
+                <p class="p1">没有更多了</p>
+                <p class="p2">点击返回文章分类列表</p>
+            </div>
+        </a>
+        {{else if prev != ""}}
+        <a href="/{{prev.url}}" rel="{{prev.title}}" title="{{prev.title}}" class="right">
+            <div>
+                <p class="p1">下一篇</p>
+                <p class="p2">{{prev.title}}</p>
+            </div>
+        </a>
+        {{/if}}
+    </div>
+</div><!-- 最新文章 -->

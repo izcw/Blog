@@ -1,0 +1,155 @@
+.camera-box {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 3rem;
+    box-sizing: border-box;
+    background-color: var(--theme-background-articleitem);
+}
+
+@media (max-width: 767.98px) {
+    .camera-box {
+        width: 100%;
+    }
+}
+
+.camera-box ul li {
+    width: 100%;
+    margin: 0 0 2rem 0;
+    padding: 1rem 0 3rem 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.6s ease;
+    animation: themecolor 0.5s;
+    position: relative;
+}
+
+@media(max-width: 600px) {
+    .camera-box {
+        padding: 3rem 1.5rem;
+    }
+}
+
+.camera-box ul li .picture {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.camera-box li .picture img {
+    margin: 4px;
+    max-width: calc(100% - 8px);
+    min-height: 120px;
+    max-height: 600px;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.2s ease;
+    animation: themecolor 0.5s;
+    background-color: var(--theme-background);
+    background-image: linear-gradient(45deg, var(--theme-background) 25%, var(--theme-background-blog-header) 0, var(--theme-background-blog-header) 50%, var(--theme-background) 0, var(--theme-background) 75%, var(--theme-background-blog-header) 0);
+    background-size: 40px 40px;
+    cursor: zoom-in;
+}
+
+.camera-box li .picture video {
+    margin: 4px;
+    max-width: calc(100% - 8px);
+    min-height: 120px;
+    max-height: 420px;
+    transition: all 0.2s ease;
+    animation: themecolor 0.5s;
+    background-color: var(--theme-background);
+}
+
+.camera-box li .picture img:hover {
+    opacity: 0.8;
+}
+
+/* 描述 */
+
+.camera-box ul li .describe {
+    padding: 0 4px;
+    box-sizing: border-box;
+}
+
+.camera-box ul li .describe time {
+    font-size: 14px;
+    color: var(--theme-color-9);
+}
+
+.camera-box ul li .describe .title {
+    display: inline-block;
+    font-size: 18px;
+    color: var(--theme-h2-color);
+    font-weight: bold;
+    padding-top: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.camera-box ul li .describe .title:hover {
+    color: #00a1d6;
+}
+
+.camera-box ul li .describe .text {
+    padding: 10px 0;
+    color: var(--theme-sspai-p);
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* 继续阅读 */
+.camera-box ul li .describe .continue {
+    display: inline-block;
+    color: var(--theme-color-6);
+    line-height: 1.8;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.camera-box ul li .describe .continue span {
+    padding-left: 6px;
+    transition: all 0.3s ease;
+}
+
+.camera-box ul li .describe .continue:hover {
+    color: var(--theme-color-9);
+}
+
+.camera-box ul li .describe .continue:hover span {
+    padding-left: 12px;
+}
+
+/* 信息 */
+.camera-box ul li .info {
+    display: flex;
+    margin-top: 10px;
+    padding: 0 4px;
+    box-sizing: border-box;
+}
+
+.camera-box ul li .info span {
+    color: var(--theme-color-9);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+    margin-right: 1rem;
+}
+
+.camera-box ul li .info span a {
+    color: var(--theme-color-9);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.camera-box ul li .icon {
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+    margin-right: 4px;
+}

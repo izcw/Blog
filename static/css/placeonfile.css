@@ -1,0 +1,40 @@
+/* 归档分类 */
+.Archive-classification {
+  margin: 30px 10px 50px 10px;
+}
+
+.Archive-classification h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--theme-h3-color);
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+
+.Archive-classification ul li a {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  color: var(--theme-color);
+  margin: 8px 0 4px 0;
+  font-size: 18px;
+}
+
+.Archive-classification ul li a div {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.Archive-classification ul li a:hover {
+  border-bottom: 1px solid transparent;
+  color: var(--theme-color-7);
+}
+
+.Archive-classification ul li a span {
+  color: var(--theme-color-7);
+  font-size: 16px;
+}
+
+/* 归档分类end */

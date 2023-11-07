@@ -1,0 +1,501 @@
+/* 标题 */
+#DoEditor h1 {
+	font-weight: 700;
+	margin-bottom: 4px;
+	color: var(--theme-sspai-h1);
+	transition: all 0.5s ease;
+}
+
+#DoEditor h2,
+#DoEditor h3,
+#DoEditor h4,
+#DoEditor h5,
+#DoEditor h6 {
+	font-weight: 700;
+	padding-top: 1rem;
+	margin-bottom: 6px;
+	color: var(--theme-sspai-h23456);
+}
+
+#DoEditor h1 {
+	font-size: 26px;
+	line-height: 1.6;
+}
+
+#DoEditor h2 {
+	font-size: 22px;
+	line-height: 1.4;
+}
+
+#DoEditor h3 {
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+#DoEditor h4 {
+	font-size: 18px;
+	line-height: 1.2;
+}
+
+#DoEditor h5 {
+	font-size: 16px;
+	line-height: 1.2;
+}
+
+#DoEditor h6 {
+	font-size: 14px;
+	line-height: 1.2;
+}
+
+/* 标题end */
+
+#DoEditor p {
+	color: var(--theme-sspai-p);
+	padding: 4px 0;
+	line-height: 1.8;
+	font-size: 16px;
+}
+
+#DoEditor strong,
+#DoEditor dfn {
+	font-weight: 700;
+}
+
+#DoEditor del {
+	text-decoration: line-through;
+	color: var(--theme-sspai-p);
+}
+
+/* 链接 */
+#DoEditor a {
+	color: #00a1d6;
+	text-decoration: underline;
+	word-break: break-word;
+}
+
+#DoEditor a:hover {
+	color: #00a1d6;
+	text-decoration: none;
+}
+
+/* 链接end */
+
+#DoEditor img {
+	width: calc(100% - 10px);
+	border-radius: 2px;
+	display: block;
+	height: auto;
+	border: 1px solid var(--border-color);
+	margin: 5px 0;
+	transition: all 0.5s ease;
+	cursor: zoom-in;
+}
+
+.simple img {
+	width: 60% !important;
+	min-width: 200px;
+	margin: 0 auto !important;
+}
+
+#DoEditor video {
+	width: calc(100% - 10px);
+	border-radius: 2px;
+	display: block;
+	height: auto;
+	border: 1px solid var(--border-color);
+	margin: 5px 0;
+	transition: all 0.5s ease;
+}
+
+/* 列表 */
+#DoEditor dl,
+#DoEditor ol,
+#DoEditor ul {
+	margin-top: 12px;
+	margin-bottom: 20px;
+	padding-left: 1.3rem;
+}
+
+#DoEditor dl li,
+#DoEditor ol li,
+#DoEditor ul li {
+	margin: 0;
+	color: var(--theme-sspai-p);
+	padding: 0;
+	line-height: 1.8;
+	font-size: 16px;
+	padding-left: 6px;
+}
+
+#DoEditor ul li {
+	list-style-type: disc;
+}
+
+/* 列表end */
+
+#DoEditor ul li [type=checkbox] {
+	margin-right: 6px;
+}
+
+#DoEditor ul li [type=checkbox]+ ::marker {
+	content: "pp";
+}
+
+/* 分割线 */
+#DoEditor hr {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border: 0;
+	border-top: 1px solid var(--border-color);
+	transition: all 0.5s ease;
+}
+
+/* 分割线end */
+
+/* 引用语法 */
+#DoEditor blockquote {
+	font-size: 1em;
+	font-style: normal;
+	margin: 1rem 0;
+	padding: 10px 0;
+	padding-left: 20px;
+	border-left: 5px solid var(--theme-blockquote-border);
+	background-color: var(--theme-blockquote-back);
+	line-height: 1.4;
+	transition: all 0.5s ease;
+	animation: themecolor 0.5s;
+}
+
+#DoEditor blockquote p {
+	color: var(--theme-blockquote-p);
+	margin: 0;
+}
+
+/* 引用语法end */
+
+/* 行内代码块 */
+#DoEditor p>code {
+	color: #2ca464;
+	font-size: 15px;
+	font-family: none;
+	background-color: var(--theme-label-tag);
+	padding: 4px 6px;
+	margin: 0 4px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+#DoEditor ul li>code {
+	color: #2ca464;
+	font-size: 15px;
+	font-family: none;
+	background-color: var(--theme-label-tag);
+	padding: 4px 6px;
+	margin: 0 4px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+/* 行内代码块end */
+
+/* 代码 */
+#DoEditor pre {
+	margin: 10px 0 20px 0;
+	font-size: 15px;
+	line-height: 1.42857;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	display: block;
+	background: #f7f6f3;
+	color: #666;
+	font-family: none;
+	position: relative;
+	border: none;
+	position: relative;
+	border: 1px solid var(--border-color);
+}
+
+#DoEditor pre::before {
+	content: "";
+	display: block;
+	height: 26px;
+	width: 100%;
+	background: url(/icon/maccode.png) 10px 10px no-repeat;
+	background-color: #212122;
+	background-size: 30px;
+	opacity: 0.9;
+}
+
+#DoEditor pre .copycode {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	cursor: pointer;
+	background-color: transparent;
+	color: #ccc;
+	border: none;
+	font-size: 12px;
+	line-height: 26px;
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+#DoEditor pre:hover .copycode {
+	opacity: 0.9;
+}
+
+#DoEditor pre .codelanguage {
+	position: absolute;
+	top: 0px;
+	left: 60px;
+	cursor: pointer;
+	font-size: 12px;
+	line-height: 26px;
+	color: #ccc;
+	opacity: 0.9;
+	transform: scale(0.9);
+}
+
+#DoEditor pre code {
+	color: #28c93f;
+	background-color: var(--theme-label-precode-back);
+	font-family: none;
+	max-height: 820px;
+	font-size: 13px;
+	line-height: 22px;
+}
+
+/* 滚动条样式 */
+#DoEditor pre code::-webkit-scrollbar {
+	width: 6px;
+}
+
+#DoEditor pre code::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+#DoEditor pre code::-webkit-scrollbar-thumb {
+	background: #a8a8a8;
+}
+
+#DoEditor pre code::-webkit-scrollbar-thumb:hover {
+	background: #a8a8a8;
+}
+
+/* 滚动条样式end */
+
+pre code.hljs {
+	display: block;
+	overflow-x: auto;
+	padding: 0.6em 1.5em 1em 1.5em !important;
+}
+
+/* 代码end */
+
+/* 表格 */
+#DoEditor table {
+	border-collapse: collapse;
+	width: 100%;
+	border: 3px solid #f6f6f6 !important;
+	margin-bottom: 20px;
+}
+
+#DoEditor th {
+	color: var(--theme-sspai-p);
+	border-collapse: collapse;
+	border-right: 1px solid #a4c3c7 !important;
+	border-bottom: 1px solid #a4c3c7 !important;
+	background-color: #cbe6ea !important;
+	padding: 5px 9px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#DoEditor td {
+	color: var(--theme-sspai-p);
+	border-collapse: collapse;
+	border-right: 1px solid #e5e5e5 !important;
+	border-bottom: 1px solid #e5e5e5 !important;
+	padding: 8px 10px;
+	font-size: 14px;
+	font-weight: normal;
+	word-break: break-all;
+}
+
+#DoEditor table tr:nth-child(odd) {
+	background-color: #fff !important;
+}
+
+#DoEditor table tr:nth-child(even) {
+	background-color: #f5f5f5 !important;
+}
+
+#DoEditor tr:hover td {
+	background-color: #f5f5f5 !important;
+	cursor: pointer;
+}
+
+/* 表格end */
+
+#DoEditor em,
+#DoEditor dfn {
+	font-style: italic;
+	font-weight: 400;
+}
+
+
+#DoEditor figure {
+	margin: 1em 0;
+}
+
+#DoEditor figcaption {
+	font-size: 0.75em;
+	padding: 0.5em 2em;
+	margin-bottom: 2em;
+}
+
+#DoEditor figure img {
+	margin-bottom: 0px;
+}
+
+
+#DoEditor ol p,
+#DoEditor ul p {
+	margin-bottom: 0px;
+}
+
+#DoEditor li {
+	margin-bottom: 0.75em;
+	margin-top: 0.75em;
+}
+
+#DoEditor ol#footnotes {
+	font-size: 0.95em;
+	padding-top: 1em;
+	margin-top: 1em;
+	margin-left: 0;
+	border-top: 1px solid #eaeaea;
+	counter-reset: footer-counter;
+	list-style: none;
+	color: var(--theme-sspai-p);
+	padding-left: 5%;
+	margin: 20px 0;
+}
+
+#DoEditor ol#footnotes li {
+	margin-bottom: 10px;
+	margin-left: 16px;
+	font-weight: 400;
+	line-height: 2;
+	list-style-type: none;
+}
+
+#DoEditor ol#footnotes li:before {
+	content: counter(footer-counter) ". ";
+	counter-increment: footer-counter;
+	font-weight: 800;
+	font-size: .95em;
+}
+
+@keyframes highfade {
+	0% {
+		background-color: none;
+	}
+
+	20% {
+		background-color: yellow;
+	}
+
+	100% {
+		background-color: none;
+	}
+}
+
+@-webkit-keyframes highfade {
+	0% {
+		background-color: none;
+	}
+
+	20% {
+		background-color: yellow;
+	}
+
+	100% {
+		background-color: none;
+	}
+}
+
+#DoEditor a:target,
+#DoEditor ol#footnotes li:target,
+#DoEditor sup a:target {
+	animation-name: highfade;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-name: highfade;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in-out;
+}
+
+#DoEditor a:target {
+	border: 0;
+	outline: 0;
+}
+
+#DoEditor a:target {
+	border: 0;
+	outline: 0;
+}
+
+#DoEditor a:target {
+	border: 0;
+	outline: 0;
+}
+
+/* 更新日志模板 */
+#DoEditor .updatetag {
+	font-size: 16px;
+	line-height: 2;
+}
+
+#DoEditor .updatetag time {
+	color: #999;
+	font-size: 14px;
+}
+
+#DoEditor .updatetag span {
+	font-size: 14px;
+	background-color: var(--theme-label-tag);
+	padding: 4px 6px;
+	margin: 0 6px;
+	border-radius: 4px;
+}
+
+/* 更新日志模板end */
+
+/* 观影图片模板 */
+.notesbookimg {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+}
+
+.notesbookimg img {
+	width: 200px !important;
+}
+
+
+/* 光影集模板 */
+.camera-img-item span {
+	font-size: 14px !important;
+	text-align: center !important;
+	color: var(--theme-color-9) !important;
+	margin-bottom: 30px;
+	display: block;
+}

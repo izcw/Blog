@@ -1,0 +1,79 @@
+{{include './template/components/article/header.html'}}
+
+<article class="content-article">
+  <section id="DoEditor" class="imgEnlarge">
+    <p class="mate-class">
+      <a href="/{{if viewdata.column != " article"}}{{viewdata.column}}{{/if}}?key=class&column={{viewdata.class}}"
+        rel="{{viewdata.class}}">/&nbsp;{{viewdata.class}}&nbsp;/</a>
+    </p>
+    <h1 class="article-h1">{{viewdata.title}}</h1>
+    {{if viewdata.column == 'camera'}}
+    {{include './template/components/CameraHead.html'}}
+    {{/if}}
+    <% include('../Article/dist/'+viewdata.path) %>
+      <div class="article-tagbox">
+        <p><time
+            datetime="{{viewdata.dateYY}}-{{viewdata.dateMM}}-{{viewdata.dateDD}}">{{viewdata.dateYY}}年{{viewdata.dateMM}}月{{viewdata.dateDD}}日</time>
+        </p>
+        <div>
+          {{each viewdata.tag item}}
+          <a href="/{{if viewdata.column != 'article'}}{{viewdata.column}}{{/if}}?key=tag&column={{item}}"
+            rel="{{item2}}">#&nbsp;{{item}}</a>
+          {{/each}}
+        </div>
+      </div>
+
+      {{include './template/components/next.html'}}<!-- 上下篇 -->
+
+
+      <div style="width: 60px;height: 1px;background-color:var(--border-border-bottom-articleitem);margin: 20px 0;">
+      </div>
+      <div class="Author-copyright">
+        <p>文章作者：<a href="{{info.abouturl}}" rel="{{info.author}}">{{info.author}}</a></p>
+        <p>文章链接：
+          <a href="/{{viewdata.url}}" rel="/{{viewdata.url}}">zhangchengwei.work/{{viewdata.url}}</a>
+        </p>
+        <p>版权声明：本博客所有文章除特别声明外，均采用<a rel="license" href="//creativecommons.org/licenses/by-nd/4.0/deed.zh">CC BY-ND
+            4.0</a>.许可协议。转载请注明来自<a href="{{info.abouturl}}" rel="{{info.author}}">{{info.author}}</a></p>
+      </div><!-- 作者信息 -->
+
+      <div style="width: 60px;height: 1px;background-color:var(--border-border-bottom-articleitem);margin: 20px 0;">
+      </div>
+      {{include './template/components/Latest.html'}}<!-- 最近文章 -->
+
+
+      {{if berelatedto != ''}}
+      <section class="section-box padding-remove">
+        <p class="blog-h3">相关文章
+          <a href="/{{if viewdata.column == 'article'}}archives{{else if viewdata.column != 'article'}}{{viewdata.column}}{{/if}}?key=class&column={{viewdata.class}}"
+            rel="{{viewdata.class}}">更多》》</a>
+        </p>
+        <div class="articles-box">
+          <ul>
+            {{each berelatedto item ind}}
+            {{if ind < 3}}<li><a href="/{{item.url}}" rel="{{item.title}}">{{item.title}}</a>
+              </li>
+              {{/if}}
+              {{/each}}
+          </ul>
+        </div>
+      </section><!-- 相关文章 -->
+      {{/if}}
+
+      <div style="width: 60px;height: 1px;background-color:var(--border-border-bottom-articleitem);margin: 20px 0 0 0;">
+      </div>
+
+  </section>
+
+  {{if viewdata.commentstatus != false}}
+  {{include './template/components/pstalk.html'}}
+  {{/if}}
+</article>
+
+{{if viewdata.column != 'notesbook' && viewdata.path != 'article/blog/blog-3.html'}}
+<aside class="right-aside">
+  {{include './template/components/article/directory.html'}}
+</aside>
+{{/if}}
+
+{{include './template/footer.html'}}

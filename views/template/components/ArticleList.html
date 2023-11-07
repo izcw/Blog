@@ -1,0 +1,47 @@
+{{if viewdata.data == ''}}
+<section class="">
+    <a href="/" class="empty">
+        <img src="/icon/empty.png" width="200px" alt="">
+        <p>暂无数据~看看其它吧</p>
+    </a>
+</section>
+{{else}}
+{{each viewdata.data item}}
+<section class="article-item">
+    <div class="introduction-box">
+        <header class="article-header">
+            <a href="/{{item.url}}" target="_blank" rel="{{item.title}}" title="{{item.title}}">
+                <h2>{{item.title}}</h2>
+                <div class="time-icon">
+                    <span>
+                        <time datetime="{{item.dateYY}}-{{item.dateMM}}-{{item.dateDD}}"
+                            class="publication-time">{{item.dateYY}}-{{item.dateMM}}-{{item.dateDD}}</time>
+                    </span>
+                </div>
+            </a>
+        </header>
+        <div class="simple imgEnlarge" id="DoEditor">
+            <% include('../../../Article/dist/'+item.path) %>
+        </div>
+        <div class="article-item-text-box">
+            <ul>
+                <li>
+                    <a href="?key=class&column={{item.class}}" rel="{{item.class}}">
+                        <img src="/icon/tag-icon.png" alt="标签-分类">
+                        <span style="margin-right: 18px;">{{item.class}}</span>
+                    </a>
+                    {{each item.tag item2}}
+                    <a href="?key=tag&column={{item2}}" rel="{{item2}}">
+                        <span>#&ensp;{{item2}}</span>
+                    </a>
+                    {{/each data}}
+                </li>
+                </li>
+            </ul>
+            <a href="/{{item.url}}" target="_blank" rel="{{item.title}}" title="{{item.title}}"
+                class="view-fulltext">全文&nbsp;...》</a>
+        </div>
+    </div>
+</section>
+{{/each}}
+{{/if}}

@@ -1,0 +1,47 @@
+/* 友情链接 */
+.friend-item {
+  margin: 40px 0;
+}
+
+.friend-item strong {
+  color: var(--theme-color-6);
+}
+
+.friend-item ul {
+  margin-top: 10px;
+}
+
+.friend-item ul li .friend-name {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid var(--theme-label-tag-action);
+  color: var(--theme-color);
+  margin: 8px 0 4px 0;
+  font-size: 18px;
+  font-family: "宋体";
+}
+
+.friend-item ul li .friend-name:hover {
+  border-bottom: 1px solid transparent;
+  color: #666;
+}
+
+/* 提示信息 */
+.tooltips-txt {
+  margin: 20px 0;
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+}
+
+.tooltips-txt p {
+  font-size: 16px;
+  color: var(--theme-color-7);
+  line-height: 28px;
+}
+
+
+.tooltips-txt p a {
+  color: var(--theme-color-6);
+  padding: 0 2px;
+  text-decoration: underline;
+}

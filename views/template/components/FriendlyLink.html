@@ -1,0 +1,9 @@
+<section class="friendly-link section-box">
+  <p class="blog-h3">友情链接<a href="/links" rel="友情链接" title="友情链接">更多&nbsp》》</a></p>
+  <ul>
+    {{each model.links.datalist item}}
+    <li><a href="{{item.link}}" target="_blank" rel="{{item.name}}" title="{{item.name}}">{{item.name}}
+        <span>&nbsp;/&nbsp;</span></a></li>
+    {{/each}}
+  </ul>
+</section><!-- 友情链接 -->

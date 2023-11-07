@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{current.getnavName}} - {{info.title}}</title>
+  <meta name="description"
+    content="{{info.description}}开设的栏目：{{each nav item}}{{item.name}}、{{/each}}；开设的分类：{{each viewdata.class item}}{{item}}、{{/each}}；标签：{{each viewdata.tag item}}{{item}}，{{/each}}">
+  <meta name="keywords"
+    content="{{each viewdata.class item}}{{item}},{{/each}}{{each viewdata.tag item}}{{item}},{{/each}}{{info.keywords}},">
+  <meta name="author" content="{{info.author}}" />
+  <!-- 加载动画 -->
+  <script src="/loading.js"></script>
+  <link rel="stylesheet" href="/loading.css">
+  <!--  -->
+  <link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/footer.css">
+  <link rel="stylesheet" href="/memy.css">
+  <link rel="stylesheet" href="/pagingPage.css">
+  <link rel="stylesheet" href="/modalbox.css">
+  <link rel="stylesheet" href="/searchbox.css">
+  <script src="/theme.js"></script>
+
+  <!-- 51 -->
+  <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+  <script>LA.init({ id: "JyGR7IHSiSzvVYTU", ck: "JyGR7IHSiSzvVYTU" })</script>
+
+  <!--51灵雀-->
+  <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+  <script>new LingQue.Monitor().init({ id: "Jzgt4Bstqx3uMI1m" });</script>
+</head>
+
+<body>
+  <!-- 加载动画 -->
+  <div id="loading-box">
+    <div class="substance">
+      <div class="loading">
+        <div></div>
+      </div>
+      <div class="loading-author">
+        <p class="p1">张成威 - 的个人网站</p>
+        <p class="p2">知不足而奋进，望远山而前行</p>
+      </div>
+    </div>
+  </div>
+  <!-- 加载动画end -->
+
+  <!-- 模态框 -->
+  <div id="greydiv"></div>
+
+  <a name="uptop"></a>
+  <div id="paging"></div>
+  <header class="blog-header pc-header">
+    <div class="blog-container blog-header-box">
+      <a href="{{info.url}}" rel="{{info.author}}" title="{{info.author}}">
+        <div class="top-logo">
+          <img src="/logo.png" alt="{{info.author}}" title="{{info.author}}">
+          <h1>{{info.author}}</h1>
+        </div>
+      </a>
+      <nav class="blog-nav">
+        <ul class="navpc-a">
+          {{include './components/HeadNav.html'}}
+          <li>
+            <div onclick="Find()" class="clicksearch search-box">
+              <img src="/icon/search-icon.png" alt="搜索文章" title="搜索文章">
+              <!-- <span>Ctrl+A</span> -->
+            </div>
+          </li>
+          <li>
+            <div class="clicksearch search-box">
+              <a href="/article/blog-5">
+                <img src="/icon/rss.png" alt="RSS订阅" title="RSS订阅">
+                <!-- <span>RSS订阅</span> -->
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="clicksearch">
+              <img src="/icon/moon0.png" onclick="toggleTheme()" class="toggle" alt="切换主题：白色、黑色" title="切换主题：白色、黑色">
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header><!-- 导航 -->
+
+
+  <header class="mobile-header">
+    <div class="header-box">
+      <div class="back-ground">
+        <div class="top-logo">
+          <a href="{{info.url}}" rel="{{info.author}}" title="{{info.author}}">
+            <img src="/my.png" alt="{{info.author}}" title="{{info.author}}">
+          </a>
+        </div>
+      </div>
+      <div class="title">
+        <h1><a href="{{info.abouturl}}" rel="{{info.author}}" title="{{info.author}}">{{info.author}}</a></h1>
+        <p>知不足而奋进，望远山而前行</p>
+      </div>
+      <div class="mobile-social-intercourse">
+        {{include './components/contact.html'}}
+      </div><!-- 联系方式 -->
+
+      <nav class="blog-nav">
+        <ul class="navmobile-a">
+          {{include './components/HeadNav.html'}}
+        </ul>
+      </nav>
+    </div>
+    <a href="/article/blog-5" class="morecolumn-rss" rel="RSS订阅" title="RSS订阅">
+      <div class="clicksearch rss-box">
+        <img src="/icon/rss.png" alt="RSS订阅" title="RSS订阅">
+      </div>
+    </a>
+    <div onclick="Find()" class="morecolumn">
+      <img src="/icon/search-icon2.png" alt="搜索文章" title="搜索文章">
+    </div>
+    <div class="morecolumn-theme">
+      <img src="/icon/moon1.png" onclick="toggleTheme()" class="toggle" alt="切换主题：白色、黑色" title="切换主题：白色、黑色">
+    </div>
+
+  </header><!-- 手机导航 -->
+
+  <div class="blog-searchbox">
+    <div onclick="closeFind()" class="close-search-div"></div>
+    <div class="backg-searchbox">
+      <div class="blog-container">
+        <div class="input-box">
+          <div class="input-div">
+            <input type="text" placeholder="请输入内容.." id="searchinput" autocomplete="off" oninput="getsearch()">
+            <button id="myBtn" onclick="getsearch()">搜索</button>
+          </div>
+          <button onclick="closeFind()" class="close-search">X</button>
+        </div>
+        <div class="searchbox-tag" id="searchbox">
+          {{include '../template/components/LabelTagfind.html'}}
+        </div>
+      </div>
+    </div>
+  </div> <!-- 搜索框 -->
+
+  <section class="blog-banner">
+    <div class="blog-container">
+      <div class="maxim">
+        <h3 class="text1">知不足而奋进</h3>
+        <h3 class="text2">望远山而前行</h3>
+        <div class="carousel-banner">
+          <ul class="images">
+            <li class="active">
+              <a href="/" target="_blank" rel="">
+                <img src="https://picserver.duoyu.link/picfile/image/202306/07-1686098627954.png" alt="">
+              </a>
+            </li>
+          </ul>
+          <div class="switch-lr switch-left">&lt;</div>
+          <div class="switch-lr switch-right">&gt;</div>
+          <ul class="switching">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section><!-- banner -->
+
+  <main class="blog-main">
+
+    <div class="social-intercourse">
+      {{include './components/contact.html'}}
+    </div><!-- 联系方式 -->
+
+    <div class="blog-container blog-main-box content-article-padding">

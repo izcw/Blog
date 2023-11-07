@@ -1,0 +1,19 @@
+{{include './template/components/cv/header.html'}}
+
+<div class="cvbox">
+  <div class="languages_css">
+    <a href="/{{viewdata.get}}" rel="{{viewdata.rel}}" title="{{viewdata.rel}}">{{viewdata.rel}}</a>
+  </div><!-- 语言切换 -->
+
+  <div class="cvbox_div" id="DoEditor">
+    <% include('../Article/dist/'+viewdata.path) %>
+  </div><!-- 内容 -->
+
+  <div class="information">
+    <div>{{viewdata.version}}</div>
+    <div onclick="download()" class="download_files"> <img src="/icon/download.png"
+        alt="{{viewdata.download}}">{{viewdata.download}}</div>
+  </div><!-- 信息 -->
+
+</div>
+{{include './template/components/cv/footer.html'}}

@@ -1,0 +1,28 @@
+{
+    "datalist": [
+        {
+            "name": "首页",
+            "link": "/"
+        },
+        {
+            "name": "读书/观影",
+            "link": "/notesbook"
+        },
+        {
+            "name": "光影集",
+            "link": "/camera"
+        },
+        {
+            "name": "友链",
+            "link": "/links"
+        },
+        {
+            "name": "归档",
+            "link": "/archives"
+        },
+        {
+            "name": "关于",
+            "link": "/article/blog-3"
+        }
+    ]
+}

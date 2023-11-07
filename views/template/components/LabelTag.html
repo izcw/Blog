@@ -1,0 +1,33 @@
+<section class="label section-box">
+  <p class="blog-h3">分类<span onclick="Find()">更多》》</span></p>
+  <nav class="label-tag">
+    <ul>
+      <li>
+        <a href="{{current.getnavLink}}" class="{{if viewdata.column == ''}}action{{/if}}" rel="全部文章" title="全部文章">
+          全部文章
+        </a>
+      </li>
+      {{each viewdata.class item}}
+      <li>
+        <a href="{{current.getnavLink}}?key=class&column={{item}}" class="{{if viewdata.column == item}}action{{/if}}"
+          rel="{{item}}">
+          {{item}}
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+  </nav>
+  <p class="blog-h3">标签</p>
+  <nav class="label-tag">
+    <ul>
+      {{each viewdata.tag item}}
+      <li>
+        <a href="{{current.getnavLink}}?key=tag&column={{item}}" class="{{if viewdata.column == item}}action{{/if}}"
+          rel="{{item}}">
+          {{item}}
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+  </nav>
+</section><!-- 标签 -->

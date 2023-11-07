@@ -1,0 +1,15 @@
+<p>当前文档的加载状态document.readyState</p>
+<ul>
+<li><code>uninitialized</code>（未初始化）还没有调用send()方法</li>
+<li><code>loading</code>（载入）已调用send()方法，正在发送请求</li>
+<li><code>loaded</code>（载入完成）send()方法执行完成，已经接收到全部响应内</li>
+<li><code>interactive</code>（交互）正在解析响应内容</li>
+<li><code>completed</code>（完成）响应内容解析完成，可以在客户端调用了</li>
+</ul>
+<pre><code class="language-javascript">if (document.readyState == &quot;loading&quot;) {
+  console.log(&quot;（载入）已调用send()方法，正在发送请求&quot;);
+}
+</code></pre>
+<p>停止加载</p>
+<pre><code class="language-javascript">window.stop()
+</code></pre>

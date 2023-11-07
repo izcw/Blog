@@ -1,0 +1,158 @@
+.blog-searchbox {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    border-top: 1px solid #ccc;
+    opacity: 1;
+    width: 100%;
+    height: calc(100% - 72px);
+    z-index: 99999;
+    display: none;
+    animation: searchboxName 0.5s;
+    overflow: hidden;
+}
+
+@keyframes searchboxName {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 内容框 */
+.backg-searchbox {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    padding: 1rem;
+    padding-bottom: 60px;
+    background-color: var(--theme-background-articleitem);
+    animation: searchboxName2 0.2s;
+    overflow-y: auto;
+}
+
+@keyframes searchboxName2 {
+    0% {
+        top: -30px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .blog-searchbox {
+        top: 0;
+    }
+
+    .blog-searchbox {
+        height: 100%;
+    }
+
+    .backg-searchbox {
+        padding: 2rem 1rem;
+    }
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 关闭 */
+.close-search-div {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+}
+
+.input-box .close-search {
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--theme-color-blog-nav);
+    background-color: transparent;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.input-box .close-search:hover {
+    color: #696969;
+}
+
+.input-div {
+    display: flex;
+    align-items: center;
+}
+
+.input-div input {
+    width: 180px;
+    font-size: 16px;
+    color: #444;
+    padding: 6px 1rem;
+    outline: none;
+}
+
+.input-div button {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #fff;
+    padding: 6px 10px;
+    border: none;
+    border: 1px solid #666;
+    background-color: #040d21;
+    cursor: pointer;
+}
+
+.input-div button:active {
+    background-color: #424242;
+}
+
+.searchbox-tag {
+    margin-top: 30px;
+}
+
+/* 文章列表*/
+.finditem {
+    background-color: var(--theme-label-tag);
+    margin: 1rem 0;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.5s ease;
+    animation: themecolor 0.5s;
+}
+
+.finditem:hover {
+    background-color: var(--theme-label-tag-action);
+    color: var(--theme-label-tag-text-action);
+    transition: all 0.3s ease;
+}
+
+.finditem a {
+    color: var(--theme-color);
+}
+
+.finditem a:hover {
+    text-decoration: underline;
+}
+
+.finditem .findtag a {
+    color: #b3b3b3;
+    font-size: 12px;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.finditem .findtag a:hover {
+    color: #fff;
+}

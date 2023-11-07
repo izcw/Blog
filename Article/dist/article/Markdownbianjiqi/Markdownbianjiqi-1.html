@@ -1,0 +1,63 @@
+<p><img src="https://picserver.duoyu.link/picfile/image/202306/07-1686097408445.png" alt="Markdown"></p>
+<hr>
+<h3 id="实现markdown编辑器有两种，一种是带编辑框的渲染，一种是所见即所得的实时渲染">实现Markdown编辑器有两种，一种是带编辑框的渲染，一种是所见即所得的实时渲染</h3>
+<h4 id="1带编辑框的渲染">1.带编辑框的渲染</h4>
+<p>带编辑框，即有两个视图，一个是输入框视图，一个是预览视图。类似于这样：
+<img src="https://picserver.duoyu.link/picfile/image/202306/07-1686097574395.png" alt="Markdown"></p>
+<h4 id="2所见即所得的实时渲染">2.所见即所得的实时渲染</h4>
+<p>实时渲染比较典型的例子是Notion，和Typora，边输入边渲染，例如在前面输入三个井号加空格就是三级标题，输入四个就是四级标题“### 文本”，即可实时预览。类似于这样：
+<img src="https://picserver.duoyu.link/picfile/image/202306/07-1686097616884.png" alt="Markdown"></p>
+<hr>
+<h3 id="第一种的实现方法（带编辑框的渲染）">第一种的实现方法（带编辑框的渲染）</h3>
+<p>这种比较简单，可以利用插件<a href="https://github.com/markedjs/marked">marked</a>，将md格式的内容转成HTML</p>
+<ul>
+<li><p>编辑视图：可以使用textarea制作一个简单的编辑器，甚至input都可以，只要md格式不乱，或者直接通过读取.md文件的方式获得md格式的文本。然后使用<a href="https://github.com/markedjs/marked">marked</a>转换成HTML格式。</p>
+</li>
+<li><p>预览视图：前面已经利用插件将md格式内容转换为HTML格式内容了，直接在浏览器就能看到效果。</p>
+</li>
+</ul>
+<hr>
+<h3 id="第二种的实现方法（所见即所得）">第二种的实现方法（所见即所得）</h3>
+<p>这里提到一个contenteditable属性，contenteditable是浏览器Dom的一个原生属性，值为true时表示该元素变为可编辑状态。因此原生就直接支持很多内容编辑操作，包括光标位移、内容选择的行为、键盘事件（如方向键控制光标）等等。</p>
+<p>demo</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Markdown&lt;/title&gt;
+&lt;/head&gt;
+&lt;style&gt;
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        background-color: #eeeeee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Editor {
+        padding: 1rem;
+        width: 600px;
+        height: 800px;
+        background-color: #fff;
+    }
+&lt;/style&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;Editor&quot; contenteditable=&quot;true&quot; spellcheck=&quot;true&quot;&gt;
+        &lt;p&gt;hello&lt;/p&gt;
+        &lt;h1&gt;hello&lt;/h1&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<p><img src="https://picserver.duoyu.link/picfile/image/202306/07-1686097644509.png" alt="contenteditable"></p>
+<p>当输入内容时会自动创建一个div将当前输入的内容包裹。换行则会创建<code>&lt;div&gt;&lt;br&gt;&lt;/div&gt;</code>。
+所以我们可以利用这个规则，监听输入的变化，然后通过获取innerHTMl去获取生成的内容，比如输入一个三级标题“### 我是三级标题”，它会自动创建为这样：<code>&lt;div&gt;### 我是三级标题&lt;br&gt;&lt;/div&gt;</code>，再利用正则匹配### 去解析生成<code>&lt;h3&gt;### 我是三级标题&lt;br&gt;&lt;/h3&gt;</code></p>
+</br>
+
+<p>当然这只是我的初步尝试，我还是一名小白，通过这篇文章记录一下我的思路，如有更好的办法，可以评论区留言。会继续追更！</p>

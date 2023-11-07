@@ -1,0 +1,63 @@
+html,
+body {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+  /*示例的滚动条属于 html，所以在 html 元素上设置。如果滚动条在其他元素上，将 scroll-padding-top 设置到附滚动条的元素即可。 */
+}
+
+/* 导航目录 */
+#directory-box {
+  padding-bottom: 20px;
+}
+
+#directory-box ul li a {
+  color: var(--theme-sspai-p);
+  font-size: 15px;
+  line-height: 28px;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#directory-box ul li a.tabH3 {
+  font-weight: bold;
+  margin-top: 14px;
+  padding-left: 10px;
+}
+
+#directory-box ul li a.tabH4 {
+  line-height: 24px;
+  width: calc(100% - 8px);
+  margin-left: 16px;
+  padding-left: 8px;
+  border-left: 1px solid #eee;
+}
+
+#directory-box ul li a.active {
+  font-weight: bold;
+  background-color: #f7f8fa;
+  border-left: 1px solid #00a1d6;
+  padding-left: 12px;
+}
+
+#directory-box ul li a.tabH4.active {
+  padding-left: 10px;
+  border-left: 1px solid #00a0d68a;
+}
+
+#directory-box ul li a:hover {
+  padding-left: 12px;
+  font-weight: bold;
+  background-color: var(--theme-label-tag);
+  border-left: 1px solid #00a1d6;
+}
+
+#directory-box ul li a.tabH4:hover {
+  padding-left: 10px;
+  font-weight: bold;
+  background-color: var(--theme-label-tag);
+  border-left: 1px solid #00a0d68a;
+}

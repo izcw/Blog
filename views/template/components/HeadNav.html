@@ -1,0 +1,10 @@
+{{each model.nav.datalist item}}
+{{if current.getnavLink == item.link}}
+<li><a href="{{item.link}}" class="action navpc" rel="{{item.name}}"
+                title="{{item.name}}">{{item.name}}</a>
+</li>
+{{else}}
+<li><a href="{{item.link}}" class="navpc" rel="{{item.name}}"
+                title="{{item.name}}">{{item.name}}</a></li>
+{{/if}}
+{{/each}}

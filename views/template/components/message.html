@@ -1,0 +1,25 @@
+<section class="comment-words section-box">
+  <p class="blog-h3">最新留言<a href="/message" rel="最新留言" title="最新留言">更多&nbsp》》</a></p>
+  {{each model.message.datalist item}}
+  {{if item.top == true}}
+  <div class="comment-words-item">
+    <a href="{{item.link}}">
+      <div class="comment-words-user">
+        <span class="name">{{item.name}}</span>&emsp;
+        <span>{{item.time}}</span>
+      </div>
+    </a>
+    <a href="/message" rel="{{item.content}}" title="{{item.content}}">
+      <div class="comment-words-content">
+        <div class="textbox">
+          {{item.content}}
+        </div>
+      </div>
+    </a>
+  </div>
+  {{/if}}
+  {{/each}}
+  <div class="add-idea">
+    <a href="/message">我也留言</a>
+  </div>
+</section><!-- 留言 -->

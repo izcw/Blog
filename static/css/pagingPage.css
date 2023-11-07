@@ -1,0 +1,50 @@
+.pagingPage {
+  margin: 80px 0;
+}
+
+.pagingPage ul {
+  display: flex;
+  justify-content: center;
+}
+
+.pagingPage ul li {
+  margin: 5px;
+}
+
+.pagingPage ul li a {
+  border-radius: 4px;
+  color: var(--theme-color);
+  font-size: 17px;
+  padding: 5px 11px;
+}
+
+.pagingPage ul li.active a {
+  background-color: var(--theme-sspai-h1);
+  color: var(--theme-background-article);
+}
+
+.pagingPage ul li:hover a {
+  background-color: var(--theme-sspai-h1);
+  color: var(--theme-background-article);
+}
+
+.pagingPage ul li:hover a i {
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+}
+
+.pagingPage ul li.disabled {
+  pointer-events: none;
+  cursor: default;
+  display: none;
+}
+
+.pagingPage ul li a.switch {
+  background-color: #ffffff00 !important;
+}
+
+.pagingPage ul li a.switch:hover {
+  background-color: var(--theme-sspai-h1) !important;
+}
