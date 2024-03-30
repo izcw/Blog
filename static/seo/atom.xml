@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.zhangchengwei.work/</id>
     <title>张成威的网络日志</title>
-    <updated>2024-03-30T02:32:48.126Z</updated>
+    <updated>2024-03-30T03:17:16.642Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>张成威</name>
@@ -11,6 +11,32 @@
     </author>
     <link rel="alternate" href="https://www.zhangchengwei.work/atom.xml"/>
     <subtitle>Zhang Chengwei's Network Log</subtitle>
+    <entry>
+        <title type="html"><![CDATA[原生js网页加载状态]]></title>
+        <id>https://www.zhangchengwei.work/article/qianduan-2</id>
+        <link href="https://www.zhangchengwei.work/article/qianduan-2"/>
+        <updated>2023-07-28T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>当前文档的加载状态document.readyState</p>
+<ul>
+<li><code>uninitialized</code>（未初始化）还没有调用send()方法</li>
+<li><code>loading</code>（载入）已调用send()方法，正在发送请求</li>
+<li><code>loaded</code>（载入完成）send()方法执行完成，已经接收到全部响应内</li>
+<li><code>interactive</code>（交互）正在解析响应内容</li>
+<li><code>completed</code>（完成）响应内容解析完成，可以在客户端调用了</li>
+</ul>
+<pre><code class="language-javascript">if (document.readyState == &quot;loading&quot;) {
+  console.log(&quot;（载入）已调用send()方法，正在发送请求&quot;);
+}
+</code></pre>
+<p>停止加载</p>
+<pre><code class="language-javascript">window.stop()
+</code></pre>
+]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[原生js页面事件]]></title>
         <id>https://www.zhangchengwei.work/article/qianduan-3</id>
@@ -40,32 +66,6 @@
 <pre><code class="language-javascript">window.onbeforeunload = function(e){
  return &quot;您的数据还未保存！&quot;;
 }
-</code></pre>
-]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[原生js网页加载状态]]></title>
-        <id>https://www.zhangchengwei.work/article/qianduan-2</id>
-        <link href="https://www.zhangchengwei.work/article/qianduan-2"/>
-        <updated>2023-07-28T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>当前文档的加载状态document.readyState</p>
-<ul>
-<li><code>uninitialized</code>（未初始化）还没有调用send()方法</li>
-<li><code>loading</code>（载入）已调用send()方法，正在发送请求</li>
-<li><code>loaded</code>（载入完成）send()方法执行完成，已经接收到全部响应内</li>
-<li><code>interactive</code>（交互）正在解析响应内容</li>
-<li><code>completed</code>（完成）响应内容解析完成，可以在客户端调用了</li>
-</ul>
-<pre><code class="language-javascript">if (document.readyState == &quot;loading&quot;) {
-  console.log(&quot;（载入）已调用send()方法，正在发送请求&quot;);
-}
-</code></pre>
-<p>停止加载</p>
-<pre><code class="language-javascript">window.stop()
 </code></pre>
 ]]></content>
         <author>
@@ -239,126 +239,6 @@ for (let y = 0; y &lt; numtime; y++) {
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[小站更新日志]]></title>
-        <id>https://www.zhangchengwei.work/article/blog-2</id>
-        <link href="https://www.zhangchengwei.work/article/blog-2"/>
-        <updated>2023-04-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="v2">v2</h3>
-<p class="updatetag">
-<time datetime="2024-03-30">2024-03-30</time><span>v2.0.4</span> 
-修复 搜索框问题
-</p>
-
-<p class="updatetag">
-<time datetime="2023-08-09">2023-08-09</time><span>v2.0.3</span> 
-增加 图片查看功能
-</p>
-
-
-<p class="updatetag">
-<time datetime="2023-07-24">2023-07-24</time><span>v2.0.2</span> 
-增加 上下翻页、相关文章
-</p>
-
-<p class="updatetag">
-<time datetime="2023-07-23">2023-07-23</time><span>v2.0.1</span> 
-增加 光影集栏目
-</p>
-
-<p class="updatetag">
-<time datetime="2023-07-22">2023-07-22</time><span>v2.0.0</span> 
-设计改版 更美观更简洁了
-</p>
-
-<h3 id="v1">v1</h3>
-<p class="updatetag">
-<time datetime="2023-06-11">2023-06-11</time><span>v1.1.0</span> 
-增加 必应、百度，每天12点自动推送URL
-</p>
-
-<p class="updatetag">
-<time datetime="2023-06-11">2023-06-11</time><span>v1.0.8</span> 
-增加 站点地图<a href="/sitemap.xml" rel="站点地图">sitemap.xml</a>自动生成
-</p>
-
-<p class="updatetag">
-<time datetime="2023-06-10">2023-06-10</time><span>v1.0.7</span> 
-增加 <a href="/article/blog-5" rel="RSS订阅">RSS订阅</a>功能
-</p>
-
-<p class="updatetag">
-<time datetime="2023-06-09">2023-06-09</time><span>v1.0.6</span> 
-调整 网站色彩
-</p>
-
-<p class="updatetag">
-<time datetime="2023-06-06">2023-06-06</time><span>v1.0.5</span> 
-增加 代码框语言显示
-</p>
-
-<p class="updatetag">
-<time datetime="2023-05-28">2023-05-28</time><span>v1.0.4</span> 
-增加 黑暗主题
-</p>
-
-<p class="updatetag">
-<time datetime="2023-05-26">2023-05-26</time><span>v1.0.2</span> 
-增加 搜索框
-</p>
-
-<p class="updatetag">
-<time datetime="2023-05-23">2023-05-23</time><span>v1.0.1</span> 
-增加 模态框
-</p>
-
-<p class="updatetag">
-<time datetime="2023-04-20">2023-04-20</time><span>v1.0.0</span> 
-完成基础功能，上线
-</p>]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于我]]></title>
-        <id>https://www.zhangchengwei.work/article/blog-3</id>
-        <link href="https://www.zhangchengwei.work/article/blog-3"/>
-        <updated>2023-04-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="hello-world">Hello, world</h3>
-<p>嗨，我是 张成威 Zhang Chengwei<br />&emsp;&emsp;&emsp;&emsp;&emsp;————知不足而奋进，望远山而前行。</p>
-<br />
-
-<h3 id="want-to-become？">Want to become？</h3>
-<p>&emsp;&emsp;我想成为一名自由软件开发者，对于软件我更看重使用者与程序的交互，用直觉去预判下一步我该怎么操作，而不是深度学习，正如史蒂夫·乔布斯在2007年发布会上调侃，早期时代的手机（摩托罗拉、黑莓、诺基亚等），他们的问题在于下面的40%，不管你用不用的着，这些键盘无时无刻不存在，而控制的按钮都是固定的。我们可以回头想一下现在还有多少软件保留着这些传统，一个软件被塞得满满当当，就像是我需要一个锤子，进入一个杂乱无间的仓库，要越过杂物的层层阻碍（广告），总有打不死的蟑螂在面前故意挑衅（红点），当我拿到锤子，最后还不得不拍拍灰走人，所以我大概是不会在仓库里久待。</p>
-<p>
- <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686318728878.png"  style="width:220px !important;" alt="诺基亚"  />
-</p>
-
-<br />
-
-<p>&emsp;&emsp;每个软件都想做All in One，功能全面，却总差强人意。我比较喜欢小团队的作品，因为它们有着自己的思考与创新，使用这些软件就像是和软件的作者深度交流，这也是为什么我想成为一名自由软件开发者的原因。推荐一部纪录片<a href="https://movie.douban.com/subject/7015793/" target="_blank" rel="《独立游戏大电影》">《独立游戏大电影》</a></p>
-<a href="/notesbook/jilupian-4" target="_blank" rel="《独立游戏大电影》">
-<p>
- <img src="https://picserver.duoyu.link/picfile/image/202306/06-1686066023242.jpg"  style="width:220px !important;" alt="《独立游戏大电影》"  />
-</p>
- </a>
-
-<br />
-
-<h3 id="my-favorite-idol">My favorite idol</h3>
-<p style="display: flex;flex-wrap: wrap;">
-<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322167659.jpg"  style="width:220px !important;height: 100%;" alt="史蒂夫·乔布斯"  />
-
-<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322604145.jpg"  style="width:220px !important;height: 100%;" alt="雷军"  />
-</p>
-]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[博客搭建]]></title>
         <id>https://www.zhangchengwei.work/article/blog-1</id>
         <link href="https://www.zhangchengwei.work/article/blog-1"/>
@@ -438,6 +318,126 @@ node .\build.js // 打包
 v2.0.0
 </code></pre>
 ]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于我]]></title>
+        <id>https://www.zhangchengwei.work/article/blog-3</id>
+        <link href="https://www.zhangchengwei.work/article/blog-3"/>
+        <updated>2023-04-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="hello-world">Hello, world</h3>
+<p>嗨，我是 张成威 Zhang Chengwei<br />&emsp;&emsp;&emsp;&emsp;&emsp;————知不足而奋进，望远山而前行。</p>
+<br />
+
+<h3 id="want-to-become？">Want to become？</h3>
+<p>&emsp;&emsp;我想成为一名自由软件开发者，对于软件我更看重使用者与程序的交互，用直觉去预判下一步我该怎么操作，而不是深度学习，正如史蒂夫·乔布斯在2007年发布会上调侃，早期时代的手机（摩托罗拉、黑莓、诺基亚等），他们的问题在于下面的40%，不管你用不用的着，这些键盘无时无刻不存在，而控制的按钮都是固定的。我们可以回头想一下现在还有多少软件保留着这些传统，一个软件被塞得满满当当，就像是我需要一个锤子，进入一个杂乱无间的仓库，要越过杂物的层层阻碍（广告），总有打不死的蟑螂在面前故意挑衅（红点），当我拿到锤子，最后还不得不拍拍灰走人。</p>
+<p>
+ <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686318728878.png"  style="width:220px !important;" alt="诺基亚"  />
+</p>
+
+<br />
+
+<p>&emsp;&emsp;每个软件都想做All in One，功能全面，却总差强人意。我比较喜欢小团队的作品，因为它们有着自己的思考与创新，使用这些软件就像是和软件的作者深度交流，这也是为什么我想成为一名自由软件开发者的原因。<br/>&emsp;&emsp;这里推荐一部纪录片<a href="https://movie.douban.com/subject/7015793/" target="_blank" rel="《独立游戏大电影》">《独立游戏大电影》</a></p>
+<a href="/notesbook/jilupian-4" target="_blank" rel="《独立游戏大电影》">
+<p>
+ <img src="https://picserver.duoyu.link/picfile/image/202306/06-1686066023242.jpg"  style="width:220px !important;" alt="《独立游戏大电影》"  />
+</p>
+ </a>
+
+<br />
+
+<h3 id="my-favorite-idol">My favorite idol</h3>
+<p style="display: flex;flex-wrap: wrap;">
+<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322167659.jpg"  style="width:220px !important;height: 100%;" alt="史蒂夫·乔布斯"  />
+
+<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322604145.jpg"  style="width:220px !important;height: 100%;" alt="雷军"  />
+</p>
+]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[小站更新日志]]></title>
+        <id>https://www.zhangchengwei.work/article/blog-2</id>
+        <link href="https://www.zhangchengwei.work/article/blog-2"/>
+        <updated>2023-04-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="v2">v2</h3>
+<p class="updatetag">
+<time datetime="2024-03-30">2024-03-30</time><span>v2.0.4</span> 
+修复 搜索框问题、读书光影集栏全部分类跳转问题
+</p>
+
+<p class="updatetag">
+<time datetime="2023-08-09">2023-08-09</time><span>v2.0.3</span> 
+增加 图片查看功能
+</p>
+
+
+<p class="updatetag">
+<time datetime="2023-07-24">2023-07-24</time><span>v2.0.2</span> 
+增加 上下翻页、相关文章
+</p>
+
+<p class="updatetag">
+<time datetime="2023-07-23">2023-07-23</time><span>v2.0.1</span> 
+增加 光影集栏目
+</p>
+
+<p class="updatetag">
+<time datetime="2023-07-22">2023-07-22</time><span>v2.0.0</span> 
+设计改版 更美观更简洁了
+</p>
+
+<h3 id="v1">v1</h3>
+<p class="updatetag">
+<time datetime="2023-06-11">2023-06-11</time><span>v1.1.0</span> 
+增加 必应、百度，每天12点自动推送URL
+</p>
+
+<p class="updatetag">
+<time datetime="2023-06-11">2023-06-11</time><span>v1.0.8</span> 
+增加 站点地图<a href="/sitemap.xml" rel="站点地图">sitemap.xml</a>自动生成
+</p>
+
+<p class="updatetag">
+<time datetime="2023-06-10">2023-06-10</time><span>v1.0.7</span> 
+增加 <a href="/article/blog-5" rel="RSS订阅">RSS订阅</a>功能
+</p>
+
+<p class="updatetag">
+<time datetime="2023-06-09">2023-06-09</time><span>v1.0.6</span> 
+调整 网站色彩
+</p>
+
+<p class="updatetag">
+<time datetime="2023-06-06">2023-06-06</time><span>v1.0.5</span> 
+增加 代码框语言显示
+</p>
+
+<p class="updatetag">
+<time datetime="2023-05-28">2023-05-28</time><span>v1.0.4</span> 
+增加 黑暗主题
+</p>
+
+<p class="updatetag">
+<time datetime="2023-05-26">2023-05-26</time><span>v1.0.2</span> 
+增加 搜索框
+</p>
+
+<p class="updatetag">
+<time datetime="2023-05-23">2023-05-23</time><span>v1.0.1</span> 
+增加 模态框
+</p>
+
+<p class="updatetag">
+<time datetime="2023-04-20">2023-04-20</time><span>v1.0.0</span> 
+完成基础功能，上线
+</p>]]></content>
         <author>
             <name>张成威</name>
             <uri>https://www.zhangchengwei.work/</uri>
@@ -887,6 +887,18 @@ v2.0.0
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[en]]></title>
+        <id>https://www.zhangchengwei.work/cv/jianli-2</id>
+        <link href="https://www.zhangchengwei.work/cv/jianli-2"/>
+        <updated>2023-06-10T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="hello">Hello</h1>
+]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[cn]]></title>
         <id>https://www.zhangchengwei.work/cv/jianli-1</id>
         <link href="https://www.zhangchengwei.work/cv/jianli-1"/>
@@ -899,12 +911,33 @@ v2.0.0
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[en]]></title>
-        <id>https://www.zhangchengwei.work/cv/jianli-2</id>
-        <link href="https://www.zhangchengwei.work/cv/jianli-2"/>
-        <updated>2023-06-10T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="hello">Hello</h1>
-]]></content>
+        <title type="html"><![CDATA[我曾走在崩溃的边缘]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dushu-9</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dushu-9"/>
+        <updated>2024-03-23T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>这本书是作者俞敏洪第一次完整、深度地讲述新东方从0到1、从1到N的创业历程，披露了诸多不为人知的细节，让人看到带领着新东方从一个培训班发展成为上市集团的创业者，以及他的团队曾经经过的至暗时刻，甚至曾走到崩溃的边缘。创业维艰，1/4个世纪的风雨征程，完整地被记录，激荡地再现了新东方创始团队及新东方人，在时代的光辉中砥砺前行的身影。</p>
+<p>延着内容主线，“三驾马车”的光阴故事已经留存，新生代的管理团队已在快速发展的互联网时代中开拓进取，搏出广阔天地，而今，人工智能浪潮下，新东方又将向何处进发，仍是新东方故事的待续篇章。</p>
+<p>相信这本书，定能让读者在作者个人一贯的幽默叙事方式中，在个人发展、组织建设、企业管理等多个方面受到启发和激励。</p>
+<p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202403/30-1711767070525.jpg" alt="我曾走在崩溃的边缘" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[小王子]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dushu-8</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dushu-8"/>
+        <updated>2024-03-12T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>小王子是一个超凡脱俗的仙童，他住在一颗只比他大一丁点儿的小行星上。陪伴他的是一朵他非常喜爱的小玫瑰花。但玫瑰花的虚荣心伤害了小王子对她的感情。小王子告别小行星，开始了遨游太空的旅行。他先后访问了六个行星，各种见闻使他陷入忧伤，他感到大人们荒唐可笑、太不正常。只有在其中一个点灯人的星球上，小王子才找到一个可以作为朋友的人。但点灯人的天地又十分狭小，除了点灯人他自己，不能容下第二个人。在地理学家的指点下，孤单的小王子来到人类居住的地球。</p>
+<p>小王子发现人类缺乏想象力，只知像鹦鹉那样重复别人讲过的话。小王子这时越来越思念自己星球上的那枝小玫瑰。后来，小王子遇到一只小狐狸，小王子用耐心征服了小狐狸，与它结成了亲密的朋友。小狐狸把自己心中的秘密——肉眼看不见事务的本质，只有用心灵才能洞察一切——作为礼物，送给小王子。用这个秘密，小王子在撒哈拉大沙漠与遇险的飞行员一起找到了生命的泉水。最后，小王子在蛇的帮助下离开地球，重新回到他的B612号小行星上。</p>
+<p>童话描写小王子没有被成人那骗人的世界所征服，而最终找到自己的理想。这理想就是连结宇宙万物的爱，而这种爱又是世间所缺少的。因此，小王子常常流露出一种伤感的情绪。作者圣埃克絮佩里在献辞中说：这本书是献给长成了大人的从前那个孩子。</p>
+<p>《小王子》不仅赢得了儿童读者，也为成年人所喜爱，作品凝练的语言渗透了作者对人类及人类文明深邃的思索。它所表现出的讽刺与幻想，真情与哲理，使之成为法国乃至世界上最为著名的一部童话小说。</p>
+<p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202403/30-1711766892908.jpg" alt="小王子" />
+</p>]]></content>
         <author>
             <name>张成威</name>
             <uri>https://www.zhangchengwei.work/</uri>
@@ -1176,20 +1209,6 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[源代码 Source Code (2011)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-26</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-26"/>
-        <updated>2022-11-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>在阿富汗执行任务的美国空军飞行员科特史蒂文斯上尉（杰克·吉伦哈尔 Jake Gyllenhaal 饰）突然惊醒，发现自己在一辆高速行驶的列车上，而他的身边坐着一个素不相识的女子克里斯蒂安（米歇尔·莫娜汉 Michelle Monaghan 饰）正在与自己讲话。科尔不知自己为什么会在这辆车上，而且他发现自己居然是以另一个人的身份存在，正当他迷惑不解的时候，列车上忽然发生爆炸……科特又一次惊醒，发现自己身处一个密闭的太空仓里，有一位女军官古德温（维拉·法米加 Vera Farmiga 饰）正在通过视频和自己对话，并要求自己报告列车上发生的事情。一头雾水的科特还没搞明白是怎么回事时，他又一次被送上那辆列车。这次之后，科特终于明白自己在执行一件任务，负责调察芝加哥火车爆炸案找到恐怖份子并查出他的下一个目标。科特被一次又一次的送上那辆高速列车，每次只有八分钟的时间调察，调察过程中，科特发现自己已在一周前去世，原来他正在参与是一项“脑波原代码”的秘密任务，这项任务通过已经死亡的科特尚未完全死亡的脑细胞影像来还原事件，调查事情的真相。最终，科特顺利完成了任务，但是他却决定再一次返回列车，拯救列车上那些无辜的生命……</p>
- <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240345096.png" alt="源代码 Source Code (2011)" />
-</p>]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[肖申克的救赎 The Shawshank Redemption (1994)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-27</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-27"/>
@@ -1197,6 +1216,20 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         <content type="html"><![CDATA[<p> 一场谋杀案使银行家安迪（蒂姆•罗宾斯 Tim Robbins 饰）蒙冤入狱，谋杀妻子及其情人的指控将囚禁他终生。在肖申克监狱的首次现身就让监狱“大哥”瑞德（摩根•弗里曼 Morgan Freeman 饰）对他另眼相看。瑞德帮助他搞到一把石锤和一幅女明星海报，两人渐成患难 之交。很快，安迪在监狱里大显其才，担当监狱图书管理员，并利用自己的金融知识帮助监狱官避税，引起了典狱长的注意，被招致麾下帮助典狱长洗黑钱。偶然一次，他得知一名新入狱的小偷能够作证帮他洗脱谋杀罪。燃起一丝希望的安迪找到了典狱长，希望他能帮自己翻案。阴险伪善的狱长假装答应安迪，背后却派人杀死小偷，让他唯一能合法出狱的希望泯灭。沮丧的安迪并没有绝望，在一个电闪雷鸣的风雨夜，一场暗藏几十年的越狱计划让他自我救赎，重获自由！老朋友瑞德在他的鼓舞和帮助下，也勇敢地奔向自由。</p>
  <p class="notesbookimg">
  <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240476289.png" alt="肖申克的救赎 The Shawshank Redemption (1994)" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[源代码 Source Code (2011)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-26</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-26"/>
+        <updated>2022-11-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>在阿富汗执行任务的美国空军飞行员科特史蒂文斯上尉（杰克·吉伦哈尔 Jake Gyllenhaal 饰）突然惊醒，发现自己在一辆高速行驶的列车上，而他的身边坐着一个素不相识的女子克里斯蒂安（米歇尔·莫娜汉 Michelle Monaghan 饰）正在与自己讲话。科尔不知自己为什么会在这辆车上，而且他发现自己居然是以另一个人的身份存在，正当他迷惑不解的时候，列车上忽然发生爆炸……科特又一次惊醒，发现自己身处一个密闭的太空仓里，有一位女军官古德温（维拉·法米加 Vera Farmiga 饰）正在通过视频和自己对话，并要求自己报告列车上发生的事情。一头雾水的科特还没搞明白是怎么回事时，他又一次被送上那辆列车。这次之后，科特终于明白自己在执行一件任务，负责调察芝加哥火车爆炸案找到恐怖份子并查出他的下一个目标。科特被一次又一次的送上那辆高速列车，每次只有八分钟的时间调察，调察过程中，科特发现自己已在一周前去世，原来他正在参与是一项“脑波原代码”的秘密任务，这项任务通过已经死亡的科特尚未完全死亡的脑细胞影像来还原事件，调查事情的真相。最终，科特顺利完成了任务，但是他却决定再一次返回列车，拯救列车上那些无辜的生命……</p>
+ <p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240345096.png" alt="源代码 Source Code (2011)" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -1344,20 +1377,6 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[阿甘正传 Forrest Gump (1994)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-15</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-15"/>
-        <updated>2019-12-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>阿甘（汤姆·汉克斯 饰）于二战结束后不久出生在美国南方阿拉巴马州一个闭塞的小镇，他先天弱智，智商只有75，然而他的妈妈是一个性格坚强的女性，她常常鼓励阿甘“傻人有傻福”，要他自强不息。阿甘像普通孩子一样上学，并且认识了一生的朋友和至爱珍妮（罗宾·莱特·潘 饰），在珍妮 和妈妈的爱护下，阿甘凭着上帝赐予的“飞毛腿”开始了一生不停的奔跑。阿甘成为橄榄球巨星、越战英雄、乒乓球外交使者、亿万富翁，但是，他始终忘不了珍妮，几次匆匆的相聚和离别，更是加深了阿甘的思念。有一天，阿甘收到珍妮的信，他们终于又要见面……</p>
- <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686238856571.png" alt="阿甘正传 Forrest Gump (1994)" />
-</p>]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[绿皮书 Green Book (2018)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-17</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-17"/>
@@ -1365,6 +1384,20 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         <content type="html"><![CDATA[<p> 托尼（维果·莫腾森 Viggo Mortensen 饰）是一个吊儿郎当游手好闲的混混，在一家夜总会做侍者。这间夜总会因故要停业几个月，可托尼所要支付的房租和生活费不会因此取消，所以他的当务之急是去寻找另一份工作来填补这几个月的空缺。在这个节骨眼上，一位名叫唐雪莉（马赫沙拉·阿里 Mahershala Ali 饰）的黑人钢琴家提出雇佣托尼。唐雪莉即将开始为期八个星期的南下巡回演出，可是，那个时候南方对黑人的歧视非常的严重，于是托尼便成为了唐雪莉的司机兼保镖。一路上，两人迥异的性格使得他们之间产生了很多的矛盾，与此同时，唐雪莉在南方所遭受的种种不公平的对待也让托尼对种族歧视感到深恶痛绝。</p>
  <p class="notesbookimg">
  <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686239140924.png" alt="绿皮书 Green Book (2018)" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[阿甘正传 Forrest Gump (1994)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-15</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-15"/>
+        <updated>2019-12-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>阿甘（汤姆·汉克斯 饰）于二战结束后不久出生在美国南方阿拉巴马州一个闭塞的小镇，他先天弱智，智商只有75，然而他的妈妈是一个性格坚强的女性，她常常鼓励阿甘“傻人有傻福”，要他自强不息。阿甘像普通孩子一样上学，并且认识了一生的朋友和至爱珍妮（罗宾·莱特·潘 饰），在珍妮 和妈妈的爱护下，阿甘凭着上帝赐予的“飞毛腿”开始了一生不停的奔跑。阿甘成为橄榄球巨星、越战英雄、乒乓球外交使者、亿万富翁，但是，他始终忘不了珍妮，几次匆匆的相聚和离别，更是加深了阿甘的思念。有一天，阿甘收到珍妮的信，他们终于又要见面……</p>
+ <p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686238856571.png" alt="阿甘正传 Forrest Gump (1994)" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -1414,20 +1447,6 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[无敌破坏王 Wreck-It Ralph (2012)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-11</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-11"/>
-        <updated>2019-06-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>无敌破坏王（约翰·C·赖利 John C. Reilly 配音）生活在一个80年代出品的低精度游戏中。他的设定身份是一个反派，每天的生活就是在游戏《快手阿修》中大搞破坏，其后由玩家操作的英雄人物快手阿修（杰克·麦克布瑞尔 Jack McBrayer 配音） 会及时赶到进行修补，赢得奖牌，包揽一切荣耀。身为反派，破坏王厌倦了自己的生活，眼看阿修被胜利者的光环围绕，自己却日复一日在无趣中过活，他终于决定改变。单纯的他以为只要自己也能得到一枚奖牌，就可以摆脱反派的身份，于是某日在游戏厅歇业后，破坏王偷偷离开了自己的游戏，前去闯荡其他电子游戏的世界。在途中，破坏王结识了来自《英雄使命》的冷酷队长（简·林奇 Jane Lynch 配音）和来自90年代糖果赛车游戏《甜蜜冲刺》的小女孩云妮（萨拉·丝沃曼 Sarah Silverman 配音）。后者梦想着能上场比赛，但其身份也不允许她梦想成真。破坏王所属的游戏《快手阿修》由于失去了他被认定为系统错误，如不尽快返回，则游戏就会被永久删除；而《甜蜜冲刺》的游戏世界则在悄悄酝酿着一场巨大的、威胁到整个游戏世界的阴谋。这也许是无敌破坏王实现梦想的机会，但也可能是一条不归路…… 他可以扭转乾坤，成为一名真正的英雄吗？</p>
- <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686238313798.png" alt="无敌破坏王 Wreck-It Ralph (2012)" />
-</p>]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[楚门的世界 The Truman Show (1998)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-16</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-16"/>
@@ -1435,6 +1454,20 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         <content type="html"><![CDATA[<p> 楚门（金•凯瑞 Jim Carrey 饰）是一个平凡得不能再平凡的人，除了一些有些稀奇的经历之外——初恋女友突然失踪、溺水身亡的父亲忽然似乎又出现在眼前，他和绝大多数30多岁的美国男人绝无异样。这令他倍感失落。他也曾试过离开自己生活了多年的地方，但总因种种理由而不能成行。直到有一天，他忽然发觉自己似乎一直在被人跟踪，无论他走到哪里，干什么事情。这种感觉愈来愈强烈。楚门决定不惜一切代价逃离这个他生活了30多年的地方，去寻找他的初恋女友。但他却发现自己怎样也逃不出去。真相其实很残忍。</p>
  <p class="notesbookimg">
  <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686238996629.png" alt="楚门的世界 The Truman Show (1998)" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[无敌破坏王 Wreck-It Ralph (2012)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-11</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-11"/>
+        <updated>2019-06-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>无敌破坏王（约翰·C·赖利 John C. Reilly 配音）生活在一个80年代出品的低精度游戏中。他的设定身份是一个反派，每天的生活就是在游戏《快手阿修》中大搞破坏，其后由玩家操作的英雄人物快手阿修（杰克·麦克布瑞尔 Jack McBrayer 配音） 会及时赶到进行修补，赢得奖牌，包揽一切荣耀。身为反派，破坏王厌倦了自己的生活，眼看阿修被胜利者的光环围绕，自己却日复一日在无趣中过活，他终于决定改变。单纯的他以为只要自己也能得到一枚奖牌，就可以摆脱反派的身份，于是某日在游戏厅歇业后，破坏王偷偷离开了自己的游戏，前去闯荡其他电子游戏的世界。在途中，破坏王结识了来自《英雄使命》的冷酷队长（简·林奇 Jane Lynch 配音）和来自90年代糖果赛车游戏《甜蜜冲刺》的小女孩云妮（萨拉·丝沃曼 Sarah Silverman 配音）。后者梦想着能上场比赛，但其身份也不允许她梦想成真。破坏王所属的游戏《快手阿修》由于失去了他被认定为系统错误，如不尽快返回，则游戏就会被永久删除；而《甜蜜冲刺》的游戏世界则在悄悄酝酿着一场巨大的、威胁到整个游戏世界的阴谋。这也许是无敌破坏王实现梦想的机会，但也可能是一条不归路…… 他可以扭转乾坤，成为一名真正的英雄吗？</p>
+ <p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686238313798.png" alt="无敌破坏王 Wreck-It Ralph (2012)" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -1470,20 +1503,6 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[龙猫 となりのトトロ (1988)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-7</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-7"/>
-        <updated>2018-09-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>小月的母亲生病住院了，父亲带着她与四岁的妹妹小梅到乡间的居住。她们对那里的环境都感到十分新奇，也发现了很多有趣的事情。她们遇到了很多小精灵，她们来到属于她们的环境中，看到了她们世界中很多的奇怪事物，更与一只大大胖胖的龙猫成为了朋友。龙猫与小精灵们利用他们的神奇力量，为小月与妹妹带来了很多神奇的景观，令她们大开眼界。妹妹小梅常常挂念生病中的母亲，嚷着要姐姐带着她去看母亲，但小月拒绝了。小梅竟然自己前往，不料途中迷路了，小月只好寻找她的龙猫及小精灵朋友们帮助。</p>
- <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686237669921.png" alt="龙猫 となりのトトロ (1988)" />
-</p>]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[千与千寻 千と千尋の神隠し (2001)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-9</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-9"/>
@@ -1491,6 +1510,20 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         <content type="html"><![CDATA[<p>千寻和爸爸妈妈一同驱车前往新家，在郊外的小路上不慎进入了神秘的隧道——他们去到了另外一个诡异世界—一个中世纪的小镇。远处飘来食物的香味，爸爸妈妈大快朵颐，孰料之后变成了猪！这时小镇上渐渐来了许多样子古怪、半透明的人。千寻仓皇逃出，一个叫小白的人救了他，喂了她阻止身体消 失的药，并且告诉她怎样去找锅炉爷爷以及汤婆婆，而且必须获得一份工作才能不被魔法变成别的东西。千寻在小白的帮助下幸运地获得了一份在浴池打杂的工作。渐渐她不再被那些怪模怪样的人吓倒，并从小玲那儿知道了小白是凶恶的汤婆婆的弟子。一次，千寻发现小白被一群白色飞舞的纸人打伤，为了救受伤的小白，她用河神送给她的药丸驱出了小白身体内的封印以及守封印的小妖精，但小白还是没有醒过来。为了救小白，千寻又踏上了她的冒险之旅。</p>
  <p class="notesbookimg">
  <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686237992508.png" alt="千与千寻 千と千尋の神隠し (2001)" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[龙猫 となりのトトロ (1988)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-7</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-7"/>
+        <updated>2018-09-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>小月的母亲生病住院了，父亲带着她与四岁的妹妹小梅到乡间的居住。她们对那里的环境都感到十分新奇，也发现了很多有趣的事情。她们遇到了很多小精灵，她们来到属于她们的环境中，看到了她们世界中很多的奇怪事物，更与一只大大胖胖的龙猫成为了朋友。龙猫与小精灵们利用他们的神奇力量，为小月与妹妹带来了很多神奇的景观，令她们大开眼界。妹妹小梅常常挂念生病中的母亲，嚷着要姐姐带着她去看母亲，但小月拒绝了。小梅竟然自己前往，不料途中迷路了，小月只好寻找她的龙猫及小精灵朋友们帮助。</p>
+ <p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686237669921.png" alt="龙猫 となりのトトロ (1988)" />
 </p>]]></content>
         <author>
             <name>张成威</name>

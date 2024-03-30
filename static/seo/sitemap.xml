@@ -36,12 +36,12 @@
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/article/qianduan-3</loc>
+    <loc>https://www.zhangchengwei.work/article/qianduan-2</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/article/qianduan-2</loc>
+    <loc>https://www.zhangchengwei.work/article/qianduan-3</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
@@ -66,7 +66,12 @@
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/article/blog-2</loc>
+    <loc>https://www.zhangchengwei.work/article/blog-1</loc>
+    <priority>1.0</priority>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>https://www.zhangchengwei.work/article/blog-4</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
@@ -76,12 +81,7 @@
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/article/blog-1</loc>
-    <priority>1.0</priority>
-    <changefreq>always</changefreq>
-  </url>
-  <url>
-    <loc>https://www.zhangchengwei.work/article/blog-4</loc>
+    <loc>https://www.zhangchengwei.work/article/blog-2</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
@@ -121,12 +121,22 @@
     <changefreq>always</changefreq>
   </url>
   <url>
+    <loc>https://www.zhangchengwei.work/cv/jianli-2</loc>
+    <priority>1.0</priority>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
     <loc>https://www.zhangchengwei.work/cv/jianli-1</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/cv/jianli-2</loc>
+    <loc>https://www.zhangchengwei.work/notesbook/dushu-9</loc>
+    <priority>1.0</priority>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>https://www.zhangchengwei.work/notesbook/dushu-8</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
@@ -216,12 +226,12 @@
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/notesbook/dianying-26</loc>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-27</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/notesbook/dianying-27</loc>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-26</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
@@ -271,12 +281,12 @@
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/notesbook/dianying-15</loc>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-17</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/notesbook/dianying-17</loc>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-15</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
@@ -296,12 +306,12 @@
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/notesbook/dianying-11</loc>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-16</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/notesbook/dianying-16</loc>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-11</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
@@ -316,12 +326,12 @@
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/notesbook/dianying-7</loc>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-9</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/notesbook/dianying-9</loc>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-7</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
