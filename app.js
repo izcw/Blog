@@ -39,6 +39,6 @@ app.set("view engine", "html"); // 设置视图引擎为自定义的渲染引擎
 
 app.use(router);
 app.set("view cache", true);
-app.listen(6060, () => {
-  console.log("服务器：http://127.0.0.1:6060");
+app.listen(3040, () => {
+  console.log("服务器：http://127.0.0.1:3040");
 });

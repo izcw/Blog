@@ -18,6 +18,13 @@
     }
   ],
   "datalist": [
+      {
+      "name": "BlackCell",
+      "link": "https://next.blackcell.fun/",
+      "motto": "物以类聚 人与群分",
+      "top": false,
+      "class": "1"
+    },
     {
       "name": "yiwanbin",
       "link": "https://yiwanbin.top/",
