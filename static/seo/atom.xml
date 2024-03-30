@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.zhangchengwei.work/</id>
     <title>张成威的网络日志</title>
-    <updated>2023-10-25T15:26:44.362Z</updated>
+    <updated>2024-03-30T02:32:48.126Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>张成威</name>
@@ -11,6 +11,42 @@
     </author>
     <link rel="alternate" href="https://www.zhangchengwei.work/atom.xml"/>
     <subtitle>Zhang Chengwei's Network Log</subtitle>
+    <entry>
+        <title type="html"><![CDATA[原生js页面事件]]></title>
+        <id>https://www.zhangchengwei.work/article/qianduan-3</id>
+        <link href="https://www.zhangchengwei.work/article/qianduan-3"/>
+        <updated>2023-07-28T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="domcontentloaded事件">DOMContentLoaded事件</h4>
+<p>DOMContentLoaded页面的DOM树解析好并且需要等待JS执行完才触发，事件不直接等待CSS文件、图片的加载完成</p>
+<p>事件会在文档的HTML和所有子资源（如图像和样式表）已经加载完成后触发，但不包括像CSS、图片等外部资源的加载。您可以将您的JavaScript代码包装在DOMContentLoaded事件中，以确保它们在文档完全解析后执行。</p>
+<pre><code class="language-javascript">document.addEventListener(&quot;DOMContentLoaded&quot;, function () {
+  console.log(&quot;当前 HTML 被完全加载以及解析完成&quot;);
+});
+</code></pre>
+<hr>
+<h4 id="windowonload方法">window.onload方法</h4>
+<p>window.onload() 方法用于在网页加载完毕后立刻执行的操作，即当 HTML 文档加载完毕后，立刻执行某个方法。</p>
+<p>通常用于 <br /> 元素，在页面完全载入后(包括图片、css文件等等)执行脚本代码。</p>
+<pre><code class="language-javascript">window.onload = function() {
+  console.log(&quot;页面全部加载完成&quot;);
+};
+</code></pre>
+<p>window.unload 表示卸载的意思，这个事件在从当前浏览器窗口内移动文档的位置时触发。
+<br />
+也就是说，通过超链接、前进或后退按钮等方式从一个页面跳转到其他页面，或者关闭浏览器窗口时触发。</p>
+<hr>
+<h4 id="beforeunload事件">beforeunload事件</h4>
+<p>beforeunload事件类型与unload事件类型功能相似，不过它更人性化，如果beforunload事件处理函数返回字符串信息，那么该字符串会显示一个确认对话框，询问用户是否离开当前页面。</p>
+<pre><code class="language-javascript">window.onbeforeunload = function(e){
+ return &quot;您的数据还未保存！&quot;;
+}
+</code></pre>
+]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[原生js网页加载状态]]></title>
         <id>https://www.zhangchengwei.work/article/qianduan-2</id>
@@ -48,42 +84,6 @@ window.location.href; //返回完整的url字符串
 window.location.pathname; //返回请求路径 /xxx/xxx.html
 window.location.protocol; //返回url 的协议部分，例如： http:，ftp:，maito:等等.
 window.location.port //url 返回端口
-</code></pre>
-]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[原生js页面事件]]></title>
-        <id>https://www.zhangchengwei.work/article/qianduan-3</id>
-        <link href="https://www.zhangchengwei.work/article/qianduan-3"/>
-        <updated>2023-07-28T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<h4 id="domcontentloaded事件">DOMContentLoaded事件</h4>
-<p>DOMContentLoaded页面的DOM树解析好并且需要等待JS执行完才触发，事件不直接等待CSS文件、图片的加载完成</p>
-<p>事件会在文档的HTML和所有子资源（如图像和样式表）已经加载完成后触发，但不包括像CSS、图片等外部资源的加载。您可以将您的JavaScript代码包装在DOMContentLoaded事件中，以确保它们在文档完全解析后执行。</p>
-<pre><code class="language-javascript">document.addEventListener(&quot;DOMContentLoaded&quot;, function () {
-  console.log(&quot;当前 HTML 被完全加载以及解析完成&quot;);
-});
-</code></pre>
-<hr>
-<h4 id="windowonload方法">window.onload方法</h4>
-<p>window.onload() 方法用于在网页加载完毕后立刻执行的操作，即当 HTML 文档加载完毕后，立刻执行某个方法。</p>
-<p>通常用于 <br /> 元素，在页面完全载入后(包括图片、css文件等等)执行脚本代码。</p>
-<pre><code class="language-javascript">window.onload = function() {
-  console.log(&quot;页面全部加载完成&quot;);
-};
-</code></pre>
-<p>window.unload 表示卸载的意思，这个事件在从当前浏览器窗口内移动文档的位置时触发。
-<br />
-也就是说，通过超链接、前进或后退按钮等方式从一个页面跳转到其他页面，或者关闭浏览器窗口时触发。</p>
-<hr>
-<h4 id="beforeunload事件">beforeunload事件</h4>
-<p>beforeunload事件类型与unload事件类型功能相似，不过它更人性化，如果beforunload事件处理函数返回字符串信息，那么该字符串会显示一个确认对话框，询问用户是否离开当前页面。</p>
-<pre><code class="language-javascript">window.onbeforeunload = function(e){
- return &quot;您的数据还未保存！&quot;;
-}
 </code></pre>
 ]]></content>
         <author>
@@ -245,6 +245,11 @@ for (let y = 0; y &lt; numtime; y++) {
         <updated>2023-04-20T00:00:00.000Z</updated>
         <content type="html"><![CDATA[<h3 id="v2">v2</h3>
 <p class="updatetag">
+<time datetime="2024-03-30">2024-03-30</time><span>v2.0.4</span> 
+修复 搜索框问题
+</p>
+
+<p class="updatetag">
 <time datetime="2023-08-09">2023-08-09</time><span>v2.0.3</span> 
 增加 图片查看功能
 </p>
@@ -310,6 +315,44 @@ for (let y = 0; y &lt; numtime; y++) {
 <time datetime="2023-04-20">2023-04-20</time><span>v1.0.0</span> 
 完成基础功能，上线
 </p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于我]]></title>
+        <id>https://www.zhangchengwei.work/article/blog-3</id>
+        <link href="https://www.zhangchengwei.work/article/blog-3"/>
+        <updated>2023-04-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="hello-world">Hello, world</h3>
+<p>嗨，我是 张成威 Zhang Chengwei<br />&emsp;&emsp;&emsp;&emsp;&emsp;————知不足而奋进，望远山而前行。</p>
+<br />
+
+<h3 id="want-to-become？">Want to become？</h3>
+<p>&emsp;&emsp;我想成为一名自由软件开发者，对于软件我更看重使用者与程序的交互，用直觉去预判下一步我该怎么操作，而不是深度学习，正如史蒂夫·乔布斯在2007年发布会上调侃，早期时代的手机（摩托罗拉、黑莓、诺基亚等），他们的问题在于下面的40%，不管你用不用的着，这些键盘无时无刻不存在，而控制的按钮都是固定的。我们可以回头想一下现在还有多少软件保留着这些传统，一个软件被塞得满满当当，就像是我需要一个锤子，进入一个杂乱无间的仓库，要越过杂物的层层阻碍（广告），总有打不死的蟑螂在面前故意挑衅（红点），当我拿到锤子，最后还不得不拍拍灰走人，所以我大概是不会在仓库里久待。</p>
+<p>
+ <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686318728878.png"  style="width:220px !important;" alt="诺基亚"  />
+</p>
+
+<br />
+
+<p>&emsp;&emsp;每个软件都想做All in One，功能全面，却总差强人意。我比较喜欢小团队的作品，因为它们有着自己的思考与创新，使用这些软件就像是和软件的作者深度交流，这也是为什么我想成为一名自由软件开发者的原因。推荐一部纪录片<a href="https://movie.douban.com/subject/7015793/" target="_blank" rel="《独立游戏大电影》">《独立游戏大电影》</a></p>
+<a href="/notesbook/jilupian-4" target="_blank" rel="《独立游戏大电影》">
+<p>
+ <img src="https://picserver.duoyu.link/picfile/image/202306/06-1686066023242.jpg"  style="width:220px !important;" alt="《独立游戏大电影》"  />
+</p>
+ </a>
+
+<br />
+
+<h3 id="my-favorite-idol">My favorite idol</h3>
+<p style="display: flex;flex-wrap: wrap;">
+<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322167659.jpg"  style="width:220px !important;height: 100%;" alt="史蒂夫·乔布斯"  />
+
+<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322604145.jpg"  style="width:220px !important;height: 100%;" alt="雷军"  />
+</p>
+]]></content>
         <author>
             <name>张成威</name>
             <uri>https://www.zhangchengwei.work/</uri>
@@ -394,44 +437,6 @@ node .\build.js // 打包
 <pre><code>$ zhangchengwei -v
 v2.0.0
 </code></pre>
-]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于我]]></title>
-        <id>https://www.zhangchengwei.work/article/blog-3</id>
-        <link href="https://www.zhangchengwei.work/article/blog-3"/>
-        <updated>2023-04-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="hello-world">Hello, world</h3>
-<p>嗨，我是 张成威 Zhang Chengwei<br />&emsp;&emsp;&emsp;&emsp;&emsp;————知不足而奋进，望远山而前行。</p>
-<br />
-
-<h3 id="want-to-become？">Want to become？</h3>
-<p>&emsp;&emsp;我想成为一名自由软件开发者，对于软件我更看重使用者与程序的交互，用直觉去预判下一步我该怎么操作，而不是深度学习，正如史蒂夫·乔布斯在2007年发布会上调侃，早期时代的手机（摩托罗拉、黑莓、诺基亚等），他们的问题在于下面的40%，不管你用不用的着，这些键盘无时无刻不存在，而控制的按钮都是固定的。我们可以回头想一下现在还有多少软件保留着这些传统，一个软件被塞得满满当当，就像是我需要一个锤子，进入一个杂乱无间的仓库，要越过杂物的层层阻碍（广告），总有打不死的蟑螂在面前故意挑衅（红点），当我拿到锤子，最后还不得不拍拍灰走人，所以我大概是不会在仓库里久待。</p>
-<p>
- <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686318728878.png"  style="width:220px !important;" alt="诺基亚"  />
-</p>
-
-<br />
-
-<p>&emsp;&emsp;每个软件都想做All in One，功能全面，却总差强人意。我比较喜欢小团队的作品，因为它们有着自己的思考与创新，使用这些软件就像是和软件的作者深度交流，这也是为什么我想成为一名自由软件开发者的原因。推荐一部纪录片<a href="https://movie.douban.com/subject/7015793/" target="_blank" rel="《独立游戏大电影》">《独立游戏大电影》</a></p>
-<a href="/notesbook/jilupian-4" target="_blank" rel="《独立游戏大电影》">
-<p>
- <img src="https://picserver.duoyu.link/picfile/image/202306/06-1686066023242.jpg"  style="width:220px !important;" alt="《独立游戏大电影》"  />
-</p>
- </a>
-
-<br />
-
-<h3 id="my-favorite-idol">My favorite idol</h3>
-<p style="display: flex;flex-wrap: wrap;">
-<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322167659.jpg"  style="width:220px !important;height: 100%;" alt="史蒂夫·乔布斯"  />
-
-<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322604145.jpg"  style="width:220px !important;height: 100%;" alt="雷军"  />
-</p>
 ]]></content>
         <author>
             <name>张成威</name>
@@ -906,6 +911,49 @@ v2.0.0
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[傻大闹宝莱坞 3 Idiots (2009)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-36</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-36"/>
+        <updated>2024-03-03T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>本片根据印度畅销书作家奇坦·巴哈特（Chetan Bhagat）的处女作小说《五点人》（Five Point Someone）改编而成。法兰（马德哈万 R Madhavan 饰）、拉杜（沙曼·乔希 Sharman Joshi 饰）与兰乔（阿米尔·汗 Aamir Khan 饰）是皇家工程学院的学生，三人共居一室，结为好友。在以严格著称的学院里，兰乔是个非常与众不同的学生，他不死记硬背，甚至还公然顶撞校长“病毒”（波曼·伊拉尼 Boman Irani 饰），质疑他的教学方法。他不仅鼓动法兰与拉杜去勇敢追寻理想，还劝说校长的二女儿碧雅（卡琳娜·卡普 Kareena Kapoor 饰）离开满眼铜臭的未婚夫。兰乔的特立独行引起了模范学生“消音器”（奥米·维嘉 Omi Vaidya 饰）的不满，他约定十年后再与兰乔一决高下，看哪种生活方式更能取得成功。</p>
+<p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202403/30-1711765802615.jpg" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[盗梦空间 Inception (2010)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-35</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-35"/>
+        <updated>2023-12-01T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>道姆·柯布（莱昂纳多·迪卡普里奥 Leonardo DiCaprio 饰）与同事阿瑟（约瑟夫·戈登-莱维特 Joseph Gordon-Levitt 饰）和纳什（卢卡斯·哈斯 Lukas Haas 饰）在一次针对日本能源大亨齐藤（渡边谦 饰）的盗梦行动中失败，反被齐藤利用。齐藤威逼利诱因遭通缉而流亡海外的柯布帮他拆分他竞争对手的公司，采取极端措施在其唯一继承人罗伯特·费希尔（希里安·墨菲 Cillian Murphy 饰）的深层潜意识中种下放弃家族公司、自立门户的想法。为了重返美国，柯布偷偷求助于岳父迈尔斯（迈克尔·凯恩 Michael Caine 饰），吸收了年轻的梦境设计师艾里阿德妮（艾伦·佩吉 Ellen Page 饰）、梦境演员艾姆斯（汤姆·哈迪 Tom Hardy 饰）和药剂师约瑟夫（迪利普·劳 Dileep Rao 饰）加入行动。在一层层递进的梦境中，柯布不仅要对付费希尔潜意识的本能反抗，还必须直面已逝妻子梅尔（玛丽昂·歌迪亚 Marion Cotillard 饰）的处处破坏，实际情况远比预想危险得多……</p>
+<p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202403/30-1711765341900.jpg" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[奥本海默 Oppenheimer (2023)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-34</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-34"/>
+        <updated>2023-11-25T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>当我们为权力金钱焦虑、兴奋与愤怒时，却根本想象不到“他们”在谈论着怎样更重要的事情。
+　　随着战争阴云笼罩世界上空，各国紧锣密鼓抓紧军事竞赛。为了抢占先机，美国陆军中将莱斯利·格罗夫斯（马特·达蒙 Matt Damon 饰）找到量子力学与核物理学领域的扛鼎人物罗伯特·奥本海默（基里安·墨菲 Cillian Murphy 饰），力荐其担任曼哈顿计划的首席科学家以及洛斯阿拉莫斯国家实验室的总负责人。经过两年争分夺秒的研发，硕大的蘑菇云终于在荒原的上空腾起，也宣告着绞肉机一般的二战即将落下帷幕。奥本海默有如将火种带到人间的普罗米修斯，可是对人性的参悟和对未来的担忧迫使他走向与政府相悖的道路。更可悲的是，凡人钟情的物欲也将一世天才裹挟至炼狱之中，永世燃烧……</p>
+ <p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202403/18-1710696008617.webp" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[白日梦想家]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-33</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-33"/>
@@ -954,13 +1002,13 @@ v2.0.0
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[天堂的张望 (2020)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-31</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-31"/>
+        <title type="html"><![CDATA[垫底辣妹 ビリギャル (2015)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-30</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-30"/>
         <updated>2023-05-01T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>7岁女孩张望和父亲张国华相依为命，生活虽是清贫，但还是生活的很幸福。一天张望突然流鼻血不止，去医院检查，才知得了急性白血病，治疗需要30多万的费用，筹钱无果的张国华整日以泪洗面；而张望，清楚自己的家庭情况，毅然决定放弃治疗。记者王小月得知此事，赶往张国华家中，才得知了张望的真实身世.....事件经媒体曝光后，张望引起社会各界关注，全国各地纷纷捐款资助，很快，张望的医疗费就凑够了。感受到社会爱的力量和无数陌生人的关心，也使张望变得无比坚强，她用常人难以想象的痛苦接受着治疗，并一次一次经历着鬼门关，然而就在大家都认为张望的病快要好起来的时候，张望却做了一个出乎所有人意料的决定...</p>
+        <content type="html"><![CDATA[<p>长相甜美的高中女孩工藤沙耶加（有村架纯 饰）在家并不受父亲待见，父亲一心要把弟弟培养成棒球手，而疏于对女儿们的呵护。沙耶加所在的高中有内部升学的制度，因此她终日和小姐妹们吃喝玩乐，学习掉到了全年级倒数第一也毫不为意。温柔勤苦的妈妈（吉田羊 饰）经常被校方找去说教，她为女儿的未来焦虑万分，因此将沙耶加送到了坪田（伊藤淳史 饰）所开办的补习班。经过水平测试，沙耶加实际只有小学四年级的水平，不过开朗自信的坪田不以为意，他以特有的方式打开女孩的心防，两人很快成为好朋友。在坪田的帮助下，沙耶加对学习的态度逐渐浓厚，后来更立下了考取庆应大学的宏愿。这是丑小鸭绝地逆袭的真实故事……本片根据《年级倒数第一的辣妹一年内偏差值提升40以上并考入庆应大学的故事》改编，该书取材自真人真事，由担任影片女主角原型小林沙耶加的私塾教师坪田信贵撰写。</p>
  <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240897473.png" alt="天堂的张望 (2020)" />
+ <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240799361.png" alt="垫底辣妹 ビリギャル (2015)" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -968,13 +1016,13 @@ v2.0.0
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[垫底辣妹 ビリギャル (2015)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-30</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-30"/>
+        <title type="html"><![CDATA[天堂的张望 (2020)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-31</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-31"/>
         <updated>2023-05-01T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>长相甜美的高中女孩工藤沙耶加（有村架纯 饰）在家并不受父亲待见，父亲一心要把弟弟培养成棒球手，而疏于对女儿们的呵护。沙耶加所在的高中有内部升学的制度，因此她终日和小姐妹们吃喝玩乐，学习掉到了全年级倒数第一也毫不为意。温柔勤苦的妈妈（吉田羊 饰）经常被校方找去说教，她为女儿的未来焦虑万分，因此将沙耶加送到了坪田（伊藤淳史 饰）所开办的补习班。经过水平测试，沙耶加实际只有小学四年级的水平，不过开朗自信的坪田不以为意，他以特有的方式打开女孩的心防，两人很快成为好朋友。在坪田的帮助下，沙耶加对学习的态度逐渐浓厚，后来更立下了考取庆应大学的宏愿。这是丑小鸭绝地逆袭的真实故事……本片根据《年级倒数第一的辣妹一年内偏差值提升40以上并考入庆应大学的故事》改编，该书取材自真人真事，由担任影片女主角原型小林沙耶加的私塾教师坪田信贵撰写。</p>
+        <content type="html"><![CDATA[<p>7岁女孩张望和父亲张国华相依为命，生活虽是清贫，但还是生活的很幸福。一天张望突然流鼻血不止，去医院检查，才知得了急性白血病，治疗需要30多万的费用，筹钱无果的张国华整日以泪洗面；而张望，清楚自己的家庭情况，毅然决定放弃治疗。记者王小月得知此事，赶往张国华家中，才得知了张望的真实身世.....事件经媒体曝光后，张望引起社会各界关注，全国各地纷纷捐款资助，很快，张望的医疗费就凑够了。感受到社会爱的力量和无数陌生人的关心，也使张望变得无比坚强，她用常人难以想象的痛苦接受着治疗，并一次一次经历着鬼门关，然而就在大家都认为张望的病快要好起来的时候，张望却做了一个出乎所有人意料的决定...</p>
  <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240799361.png" alt="垫底辣妹 ビリギャル (2015)" />
+ <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240897473.png" alt="天堂的张望 (2020)" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -1042,7 +1090,7 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[铃芽之旅 すずめの戸締まり ]]></title>
+        <title type="html"><![CDATA[铃芽之旅 すずめの戸締まり ]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-32</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-32"/>
         <updated>2023-04-16T00:00:00.000Z</updated>
@@ -1114,6 +1162,20 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[情书 Love Letter (1995)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-25</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-25"/>
+        <updated>2022-11-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>日本神户某个飘雪的冬日，渡边博子（中山美穗）在前未婚夫藤井树的两周年祭日上又一次悲痛到不能自已。正因为无法抑制住对已逝恋人的思念，渡边博子在其中学同学录里发现“藤井树” 在小樽市读书时的地址时，依循着寄发了一封本以为是发往天国的情书。不想不久渡边博子竟然收到署名为“藤井树（酒井美纪）”的回信，经过进一步了解，她知晓此藤井树是一个同她年纪相仿的女孩，且还是男友藤井树（柏原崇）少年时代的同班同学。为了多了解一些昔日恋人在中学时代的情况，渡边博子开始与女性藤井树书信往来。而藤井树在不断的回忆中，渐渐发现少年时代与她同名同姓的那个藤井树曾对自己藏了一腔柔情。</p>
+ <p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240212352.png" alt="情书 Love Letter (1995)" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[源代码 Source Code (2011)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-26</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-26"/>
@@ -1135,20 +1197,6 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         <content type="html"><![CDATA[<p> 一场谋杀案使银行家安迪（蒂姆•罗宾斯 Tim Robbins 饰）蒙冤入狱，谋杀妻子及其情人的指控将囚禁他终生。在肖申克监狱的首次现身就让监狱“大哥”瑞德（摩根•弗里曼 Morgan Freeman 饰）对他另眼相看。瑞德帮助他搞到一把石锤和一幅女明星海报，两人渐成患难 之交。很快，安迪在监狱里大显其才，担当监狱图书管理员，并利用自己的金融知识帮助监狱官避税，引起了典狱长的注意，被招致麾下帮助典狱长洗黑钱。偶然一次，他得知一名新入狱的小偷能够作证帮他洗脱谋杀罪。燃起一丝希望的安迪找到了典狱长，希望他能帮自己翻案。阴险伪善的狱长假装答应安迪，背后却派人杀死小偷，让他唯一能合法出狱的希望泯灭。沮丧的安迪并没有绝望，在一个电闪雷鸣的风雨夜，一场暗藏几十年的越狱计划让他自我救赎，重获自由！老朋友瑞德在他的鼓舞和帮助下，也勇敢地奔向自由。</p>
  <p class="notesbookimg">
  <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240476289.png" alt="肖申克的救赎 The Shawshank Redemption (1994)" />
-</p>]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[情书 Love Letter (1995)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-25</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-25"/>
-        <updated>2022-11-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>日本神户某个飘雪的冬日，渡边博子（中山美穗）在前未婚夫藤井树的两周年祭日上又一次悲痛到不能自已。正因为无法抑制住对已逝恋人的思念，渡边博子在其中学同学录里发现“藤井树” 在小樽市读书时的地址时，依循着寄发了一封本以为是发往天国的情书。不想不久渡边博子竟然收到署名为“藤井树（酒井美纪）”的回信，经过进一步了解，她知晓此藤井树是一个同她年纪相仿的女孩，且还是男友藤井树（柏原崇）少年时代的同班同学。为了多了解一些昔日恋人在中学时代的情况，渡边博子开始与女性藤井树书信往来。而藤井树在不断的回忆中，渐渐发现少年时代与她同名同姓的那个藤井树曾对自己藏了一腔柔情。</p>
- <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240212352.png" alt="情书 Love Letter (1995)" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -1450,7 +1498,7 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[侧耳倾听 耳をすませば (1995)]]></title>
+        <title type="html"><![CDATA[侧耳倾听 耳をすませば (1995)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-5</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-5"/>
         <updated>2018-07-31T16:00:00.000Z</updated>
@@ -1478,7 +1526,7 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[崖上的波妞 崖の上のポニョ (2008)]]></title>
+        <title type="html"><![CDATA[崖上的波妞 崖の上のポニョ (2008)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-8</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-8"/>
         <updated>2018-04-20T00:00:00.000Z</updated>
@@ -1506,7 +1554,7 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[西西里的美丽传说 Malèna (2000)]]></title>
+        <title type="html"><![CDATA[西西里的美丽传说 Malèna (2000)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-3</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-3"/>
         <updated>2017-10-20T00:00:00.000Z</updated>
@@ -1548,7 +1596,7 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[天空之城 天空の城ラピュタ (1986)]]></title>
+        <title type="html"><![CDATA[天空之城 天空の城ラピュタ (1986)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-6</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-6"/>
         <updated>2016-02-29T16:00:00.000Z</updated>

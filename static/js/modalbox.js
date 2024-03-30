@@ -160,6 +160,9 @@ function findHighlight(searchVal, htmldiv) {
   finditemul.forEach((item) => {
     if (item.querySelector(".findHighlight") !== null) {
       item.style.display = "block";
+      document.querySelector(".notfound").style.display = "none";
+    }else{
+      document.querySelector(".notfound").style.display = "block";
     }
   });
 }
