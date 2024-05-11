@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.zhangchengwei.work/</id>
     <title>张成威的网络日志</title>
-    <updated>2024-03-30T03:17:16.642Z</updated>
+    <updated>2024-05-11T06:28:11.714Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>张成威</name>
@@ -11,32 +11,6 @@
     </author>
     <link rel="alternate" href="https://www.zhangchengwei.work/atom.xml"/>
     <subtitle>Zhang Chengwei's Network Log</subtitle>
-    <entry>
-        <title type="html"><![CDATA[原生js网页加载状态]]></title>
-        <id>https://www.zhangchengwei.work/article/qianduan-2</id>
-        <link href="https://www.zhangchengwei.work/article/qianduan-2"/>
-        <updated>2023-07-28T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>当前文档的加载状态document.readyState</p>
-<ul>
-<li><code>uninitialized</code>（未初始化）还没有调用send()方法</li>
-<li><code>loading</code>（载入）已调用send()方法，正在发送请求</li>
-<li><code>loaded</code>（载入完成）send()方法执行完成，已经接收到全部响应内</li>
-<li><code>interactive</code>（交互）正在解析响应内容</li>
-<li><code>completed</code>（完成）响应内容解析完成，可以在客户端调用了</li>
-</ul>
-<pre><code class="language-javascript">if (document.readyState == &quot;loading&quot;) {
-  console.log(&quot;（载入）已调用send()方法，正在发送请求&quot;);
-}
-</code></pre>
-<p>停止加载</p>
-<pre><code class="language-javascript">window.stop()
-</code></pre>
-]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
     <entry>
         <title type="html"><![CDATA[原生js页面事件]]></title>
         <id>https://www.zhangchengwei.work/article/qianduan-3</id>
@@ -66,6 +40,32 @@
 <pre><code class="language-javascript">window.onbeforeunload = function(e){
  return &quot;您的数据还未保存！&quot;;
 }
+</code></pre>
+]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[原生js网页加载状态]]></title>
+        <id>https://www.zhangchengwei.work/article/qianduan-2</id>
+        <link href="https://www.zhangchengwei.work/article/qianduan-2"/>
+        <updated>2023-07-28T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>当前文档的加载状态document.readyState</p>
+<ul>
+<li><code>uninitialized</code>（未初始化）还没有调用send()方法</li>
+<li><code>loading</code>（载入）已调用send()方法，正在发送请求</li>
+<li><code>loaded</code>（载入完成）send()方法执行完成，已经接收到全部响应内</li>
+<li><code>interactive</code>（交互）正在解析响应内容</li>
+<li><code>completed</code>（完成）响应内容解析完成，可以在客户端调用了</li>
+</ul>
+<pre><code class="language-javascript">if (document.readyState == &quot;loading&quot;) {
+  console.log(&quot;（载入）已调用send()方法，正在发送请求&quot;);
+}
+</code></pre>
+<p>停止加载</p>
+<pre><code class="language-javascript">window.stop()
 </code></pre>
 ]]></content>
         <author>
@@ -309,59 +309,6 @@ node .\build.js // 打包
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[zhangchengwei.work]]></title>
-        <id>https://www.zhangchengwei.work/article/blog-4</id>
-        <link href="https://www.zhangchengwei.work/article/blog-4"/>
-        <updated>2023-04-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p><span><time datetime="2023-06-07">癸卯年四月甘二</time></span> ———— 关于我，2.0.0版本啦！</p>
-<pre><code>$ zhangchengwei -v
-v2.0.0
-</code></pre>
-]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于我]]></title>
-        <id>https://www.zhangchengwei.work/article/blog-3</id>
-        <link href="https://www.zhangchengwei.work/article/blog-3"/>
-        <updated>2023-04-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="hello-world">Hello, world</h3>
-<p>嗨，我是 张成威 Zhang Chengwei<br />&emsp;&emsp;&emsp;&emsp;&emsp;————知不足而奋进，望远山而前行。</p>
-<br />
-
-<h3 id="want-to-become？">Want to become？</h3>
-<p>&emsp;&emsp;我想成为一名自由软件开发者，对于软件我更看重使用者与程序的交互，用直觉去预判下一步我该怎么操作，而不是深度学习，正如史蒂夫·乔布斯在2007年发布会上调侃，早期时代的手机（摩托罗拉、黑莓、诺基亚等），他们的问题在于下面的40%，不管你用不用的着，这些键盘无时无刻不存在，而控制的按钮都是固定的。我们可以回头想一下现在还有多少软件保留着这些传统，一个软件被塞得满满当当，就像是我需要一个锤子，进入一个杂乱无间的仓库，要越过杂物的层层阻碍（广告），总有打不死的蟑螂在面前故意挑衅（红点），当我拿到锤子，最后还不得不拍拍灰走人。</p>
-<p>
- <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686318728878.png"  style="width:220px !important;" alt="诺基亚"  />
-</p>
-
-<br />
-
-<p>&emsp;&emsp;每个软件都想做All in One，功能全面，却总差强人意。我比较喜欢小团队的作品，因为它们有着自己的思考与创新，使用这些软件就像是和软件的作者深度交流，这也是为什么我想成为一名自由软件开发者的原因。<br/>&emsp;&emsp;这里推荐一部纪录片<a href="https://movie.douban.com/subject/7015793/" target="_blank" rel="《独立游戏大电影》">《独立游戏大电影》</a></p>
-<a href="/notesbook/jilupian-4" target="_blank" rel="《独立游戏大电影》">
-<p>
- <img src="https://picserver.duoyu.link/picfile/image/202306/06-1686066023242.jpg"  style="width:220px !important;" alt="《独立游戏大电影》"  />
-</p>
- </a>
-
-<br />
-
-<h3 id="my-favorite-idol">My favorite idol</h3>
-<p style="display: flex;flex-wrap: wrap;">
-<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322167659.jpg"  style="width:220px !important;height: 100%;" alt="史蒂夫·乔布斯"  />
-
-<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322604145.jpg"  style="width:220px !important;height: 100%;" alt="雷军"  />
-</p>
-]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[小站更新日志]]></title>
         <id>https://www.zhangchengwei.work/article/blog-2</id>
         <link href="https://www.zhangchengwei.work/article/blog-2"/>
@@ -438,6 +385,59 @@ v2.0.0
 <time datetime="2023-04-20">2023-04-20</time><span>v1.0.0</span> 
 完成基础功能，上线
 </p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[zhangchengwei.work]]></title>
+        <id>https://www.zhangchengwei.work/article/blog-4</id>
+        <link href="https://www.zhangchengwei.work/article/blog-4"/>
+        <updated>2023-04-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p><span><time datetime="2023-06-07">癸卯年四月甘二</time></span> ———— 关于我，2.0.0版本啦！</p>
+<pre><code>$ zhangchengwei -v
+v2.0.0
+</code></pre>
+]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于我]]></title>
+        <id>https://www.zhangchengwei.work/article/blog-3</id>
+        <link href="https://www.zhangchengwei.work/article/blog-3"/>
+        <updated>2023-04-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="hello-world">Hello, world</h3>
+<p>嗨，我是 张成威 Zhang Chengwei<br />&emsp;&emsp;&emsp;&emsp;&emsp;————知不足而奋进，望远山而前行。</p>
+<br />
+
+<h3 id="want-to-become？">Want to become？</h3>
+<p>&emsp;&emsp;我想成为一名自由软件开发者，对于软件我更看重使用者与程序的交互，用直觉去预判下一步我该怎么操作，而不是深度学习，正如史蒂夫·乔布斯在2007年发布会上调侃，早期时代的手机（摩托罗拉、黑莓、诺基亚等），他们的问题在于下面的40%，不管你用不用的着，这些键盘无时无刻不存在，而控制的按钮都是固定的。我们可以回头想一下现在还有多少软件保留着这些传统，一个软件被塞得满满当当，就像是我需要一个锤子，进入一个杂乱无间的仓库，要越过杂物的层层阻碍（广告），总有打不死的蟑螂在面前故意挑衅（红点），当我拿到锤子，最后还不得不拍拍灰走人。</p>
+<p>
+ <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686318728878.png"  style="width:220px !important;" alt="诺基亚"  />
+</p>
+
+<br />
+
+<p>&emsp;&emsp;每个软件都想做All in One，功能全面，却总差强人意。我比较喜欢小团队的作品，因为它们有着自己的思考与创新，使用这些软件就像是和软件的作者深度交流，这也是为什么我想成为一名自由软件开发者的原因。<br/>&emsp;&emsp;这里推荐一部纪录片<a href="https://movie.douban.com/subject/7015793/" target="_blank" rel="《独立游戏大电影》">《独立游戏大电影》</a></p>
+<a href="/notesbook/jilupian-4" target="_blank" rel="《独立游戏大电影》">
+<p>
+ <img src="https://picserver.duoyu.link/picfile/image/202306/06-1686066023242.jpg"  style="width:220px !important;" alt="《独立游戏大电影》"  />
+</p>
+ </a>
+
+<br />
+
+<h3 id="my-favorite-idol">My favorite idol</h3>
+<p style="display: flex;flex-wrap: wrap;">
+<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322167659.jpg"  style="width:220px !important;height: 100%;" alt="史蒂夫·乔布斯"  />
+
+<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322604145.jpg"  style="width:220px !important;height: 100%;" alt="雷军"  />
+</p>
+]]></content>
         <author>
             <name>张成威</name>
             <uri>https://www.zhangchengwei.work/</uri>
@@ -911,6 +911,51 @@ v2.0.0
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[穿普拉达的女王 The Devil Wears Prada (2006)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-37</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-37"/>
+        <updated>2024-05-23T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>初涉社会的安德丽娅•桑切丝（安妮•海瑟薇饰）来到了著名时尚杂志《RUNWAY》面试，以聪明得到了主编米兰达•普雷斯丽（梅利尔•斯特里普）的特许，让她担任自己的第二助理。开始的时候安德丽娅感到十分委屈，就算自己多努力工作也无法得到赞赏，经一位老前辈的指点便重新改造自己。工作越来越顺，甚至取代了第一助理在米兰达心中的地位，决定带着这个聪明的女孩前往法国。可安德丽的改变让她失去了男友及朋友的爱，令她非常矛盾。
+　　到达法国后，她得知了米兰达的地位不保了，没想到米兰达竟然牺牲自己多年的好搭档保住了自己的地位，此事令安德丽娅深感失望，有了抽身离去的想法，到底安德丽娅会何去何从？</p>
+<p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202405/11-1715407302236.webp" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[好好先生 Yes Man (2008)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-38</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-38"/>
+        <updated>2024-05-04T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>已过而立之年的卡尔·阿伦（金·凯瑞 Jim Carrey 饰）虽然衣食无忧，但他的人生可谓失败透顶。三年前和妻子离婚，始终过着单身生活。他在银行工作，不过基本呈混吃等死、升迁无望的状态。生活中他拒绝和他人交往，反而更愿意窝在家里看电影，整个人生仿佛被灰色的浓雾所笼罩。在 朋友的建议下，卡尔来到一家名为“好好先生”的机构作咨询，在导师泰伦斯（特伦斯·斯坦姆普 Terence Stamp 饰）的指引下，他尝试对生活中每一个问题都以肯定的方式回答。这小小的改变令卡尔的人生天翻地覆，荣誉、金钱、机遇、爱情接踵而来，正当他信心满满之时，却发现人生并非像他想得如此简单……</p>
+<p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202405/11-1715407402935.webp" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[幸福终点站 The Terminal (2004)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-39</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-39"/>
+        <updated>2024-05-04T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>为了完成父亲的心愿，维克多（汤姆•汉克斯 Tom Hanks 饰）从故国乘坐飞机前往美国肯尼迪机场，但戏剧性的事情发生了：他被告知祖国发生政变，而他的身份证护照一一失效，同时他的签证也无法再使用。进退两难的维克多只有在机场滞留，等待新证件的办理。
+　　但是，他在机场等待了整整9个月。在这9个月里面，他用机场的洗手间洗漱，在候机室睡觉，他已经学懂因地制宜，在机场照料自己的生活，甚至还找了一份建筑工地工作。然而维克多的邋遢晦气却招来了机场负责人弗兰克（史坦利•图齐 Stanley Tucci 饰）的不满，而恐怕更令他气愤妒忌的是，美丽的空姐艾米利亚（凯瑟琳•泽塔-琼斯 Catherine Zeta-Jones 饰）竟然爱上了维克多。处在甜蜜中的维克多，也在慢慢观察机场的人生百态，自得其乐</p>
+<p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202405/11-1715407587175.webp" />
+</p>
+]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[我曾走在崩溃的边缘]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dushu-9</id>
         <link href="https://www.zhangchengwei.work/notesbook/dushu-9"/>
@@ -1035,7 +1080,7 @@ v2.0.0
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[垫底辣妹 ビリギャル (2015)]]></title>
+        <title type="html"><![CDATA[垫底辣妹 ビリギャル (2015)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-30</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-30"/>
         <updated>2023-05-01T00:00:00.000Z</updated>
@@ -1123,7 +1168,7 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[铃芽之旅 すずめの戸締まり ]]></title>
+        <title type="html"><![CDATA[铃芽之旅 すずめの戸締まり ]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-32</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-32"/>
         <updated>2023-04-16T00:00:00.000Z</updated>
@@ -1181,20 +1226,6 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[猫鼠游戏 Catch Me If You Can (2002)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-23</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-23"/>
-        <updated>2022-11-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>弗兰克（莱昂纳多·迪卡普里奥 Leonardo DiCaprio饰）是FBI有史以来年龄最小的通缉犯。他的犯罪手段神通广大，伪装身份的能力超乎常人，全美各地几乎都留下他的犯罪足迹。乔装医生、律师、飞行员，统统都是他曾经的身份。当然，弗兰克凭着这个“本领”，骗取了高达几百万的金额。活得逍遥快乐的弗兰克这次又成功伪造了一份学历证明，去医院做起了大夫。弗兰克不但在这里认识了护士布雷达（艾米·亚当斯 Amy Adams饰），二人擦出爱火花，还通过布雷达的父亲得到了一份检察官助理的优差。然而，这只是暴风雨前夕——一双眼睛已经盯住了弗兰克，誓要把他绳之于法不可。这就是FBI探员卡尔（汤姆·汉克斯 Tom Hanks饰）。在研究追捕弗兰克的过程中，卡尔领教到这个犯罪天才的过人智商。他屡次被弗兰克这个黄毛小子捉弄，心里又恨又不得不佩服。每当弗兰克有惊无险地从他的精心布局中逃脱时，这个猫鼠游戏显得有趣起来……</p>
- <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686239980152.png" alt="猫鼠游戏 Catch Me If You Can (2002)" />
-</p>]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[情书 Love Letter (1995)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-25</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-25"/>
@@ -1209,13 +1240,13 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[肖申克的救赎 The Shawshank Redemption (1994)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-27</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-27"/>
+        <title type="html"><![CDATA[猫鼠游戏 Catch Me If You Can (2002)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-23</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-23"/>
         <updated>2022-11-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p> 一场谋杀案使银行家安迪（蒂姆•罗宾斯 Tim Robbins 饰）蒙冤入狱，谋杀妻子及其情人的指控将囚禁他终生。在肖申克监狱的首次现身就让监狱“大哥”瑞德（摩根•弗里曼 Morgan Freeman 饰）对他另眼相看。瑞德帮助他搞到一把石锤和一幅女明星海报，两人渐成患难 之交。很快，安迪在监狱里大显其才，担当监狱图书管理员，并利用自己的金融知识帮助监狱官避税，引起了典狱长的注意，被招致麾下帮助典狱长洗黑钱。偶然一次，他得知一名新入狱的小偷能够作证帮他洗脱谋杀罪。燃起一丝希望的安迪找到了典狱长，希望他能帮自己翻案。阴险伪善的狱长假装答应安迪，背后却派人杀死小偷，让他唯一能合法出狱的希望泯灭。沮丧的安迪并没有绝望，在一个电闪雷鸣的风雨夜，一场暗藏几十年的越狱计划让他自我救赎，重获自由！老朋友瑞德在他的鼓舞和帮助下，也勇敢地奔向自由。</p>
+        <content type="html"><![CDATA[<p>弗兰克（莱昂纳多·迪卡普里奥 Leonardo DiCaprio饰）是FBI有史以来年龄最小的通缉犯。他的犯罪手段神通广大，伪装身份的能力超乎常人，全美各地几乎都留下他的犯罪足迹。乔装医生、律师、飞行员，统统都是他曾经的身份。当然，弗兰克凭着这个“本领”，骗取了高达几百万的金额。活得逍遥快乐的弗兰克这次又成功伪造了一份学历证明，去医院做起了大夫。弗兰克不但在这里认识了护士布雷达（艾米·亚当斯 Amy Adams饰），二人擦出爱火花，还通过布雷达的父亲得到了一份检察官助理的优差。然而，这只是暴风雨前夕——一双眼睛已经盯住了弗兰克，誓要把他绳之于法不可。这就是FBI探员卡尔（汤姆·汉克斯 Tom Hanks饰）。在研究追捕弗兰克的过程中，卡尔领教到这个犯罪天才的过人智商。他屡次被弗兰克这个黄毛小子捉弄，心里又恨又不得不佩服。每当弗兰克有惊无险地从他的精心布局中逃脱时，这个猫鼠游戏显得有趣起来……</p>
  <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240476289.png" alt="肖申克的救赎 The Shawshank Redemption (1994)" />
+ <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686239980152.png" alt="猫鼠游戏 Catch Me If You Can (2002)" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -1230,6 +1261,20 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         <content type="html"><![CDATA[<p>在阿富汗执行任务的美国空军飞行员科特史蒂文斯上尉（杰克·吉伦哈尔 Jake Gyllenhaal 饰）突然惊醒，发现自己在一辆高速行驶的列车上，而他的身边坐着一个素不相识的女子克里斯蒂安（米歇尔·莫娜汉 Michelle Monaghan 饰）正在与自己讲话。科尔不知自己为什么会在这辆车上，而且他发现自己居然是以另一个人的身份存在，正当他迷惑不解的时候，列车上忽然发生爆炸……科特又一次惊醒，发现自己身处一个密闭的太空仓里，有一位女军官古德温（维拉·法米加 Vera Farmiga 饰）正在通过视频和自己对话，并要求自己报告列车上发生的事情。一头雾水的科特还没搞明白是怎么回事时，他又一次被送上那辆列车。这次之后，科特终于明白自己在执行一件任务，负责调察芝加哥火车爆炸案找到恐怖份子并查出他的下一个目标。科特被一次又一次的送上那辆高速列车，每次只有八分钟的时间调察，调察过程中，科特发现自己已在一周前去世，原来他正在参与是一项“脑波原代码”的秘密任务，这项任务通过已经死亡的科特尚未完全死亡的脑细胞影像来还原事件，调查事情的真相。最终，科特顺利完成了任务，但是他却决定再一次返回列车，拯救列车上那些无辜的生命……</p>
  <p class="notesbookimg">
  <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240345096.png" alt="源代码 Source Code (2011)" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[肖申克的救赎 The Shawshank Redemption (1994)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-27</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-27"/>
+        <updated>2022-11-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p> 一场谋杀案使银行家安迪（蒂姆•罗宾斯 Tim Robbins 饰）蒙冤入狱，谋杀妻子及其情人的指控将囚禁他终生。在肖申克监狱的首次现身就让监狱“大哥”瑞德（摩根•弗里曼 Morgan Freeman 饰）对他另眼相看。瑞德帮助他搞到一把石锤和一幅女明星海报，两人渐成患难 之交。很快，安迪在监狱里大显其才，担当监狱图书管理员，并利用自己的金融知识帮助监狱官避税，引起了典狱长的注意，被招致麾下帮助典狱长洗黑钱。偶然一次，他得知一名新入狱的小偷能够作证帮他洗脱谋杀罪。燃起一丝希望的安迪找到了典狱长，希望他能帮自己翻案。阴险伪善的狱长假装答应安迪，背后却派人杀死小偷，让他唯一能合法出狱的希望泯灭。沮丧的安迪并没有绝望，在一个电闪雷鸣的风雨夜，一场暗藏几十年的越狱计划让他自我救赎，重获自由！老朋友瑞德在他的鼓舞和帮助下，也勇敢地奔向自由。</p>
+ <p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240476289.png" alt="肖申克的救赎 The Shawshank Redemption (1994)" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -1405,20 +1450,6 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[寻梦环游记 Coco (2017)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-13</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-13"/>
-        <updated>2019-08-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>热爱音乐的米格尔（安东尼·冈萨雷兹 Anthony Gonzalez 配音）不幸地出生在一个视音乐为洪水猛兽的大家庭之中，一家人只盼着米格尔快快长大，好继承家里传承了数代的制鞋产业。一年一度的亡灵节即将来临，每逢这一天，去世的亲人们的魂魄便可凭借着摆在祭坛上的照片返回现世和生者团圆。在一场意外中，米格尔竟然穿越到了亡灵国度之中，在太阳升起之前，他必须得到一位亲人的祝福，否则就将会永远地留在这个世界里。米格尔决定去寻找已故的歌神德拉库斯（本杰明·布拉特 Benjamin Bratt 配音），因为他很有可能就是自己的祖父。途中，米格尔邂逅了落魄乐手埃克托（盖尔·加西亚·贝纳尔 Gael García Bernal 配音），也渐渐发现了德拉库斯隐藏已久的秘密。</p>
- <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686238610029.png" alt="寻梦环游记 Coco (2017)" />
-</p>]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[疯狂动物城 Zootopia (2016)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-12</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-12"/>
@@ -1426,6 +1457,20 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         <content type="html"><![CDATA[<p>故事发生在一个所有哺乳类动物和谐共存的美好世界中，兔子朱迪（金妮弗·古德温 Ginnifer Goodwin 配音）从小就梦想着能够成为一名惩恶扬善的刑警，凭借着智慧和努力，朱迪成功的从警校中毕业进入了疯狂动物城警察局，殊不知这里是大型肉食类动物的领地，作为第一只，也是唯一的小型食草类动物，朱迪会遇到怎样的故事呢？近日里，城中接连发生动物失踪案件，就在全部警员都致力于调查案件真相之时，朱迪却被局长（伊德瑞斯·艾尔巴 Idris Elba 配音）发配成为了一名无足轻重的交警。某日，正在执勤的兔子遇见了名为尼克（杰森·贝特曼 Jason Bateman 配音）的狐狸，两人不打不相识，之后又误打误撞的接受了寻找失踪的水獭先生的任务，如果不能在两天之内找到水獭先生，朱迪就必须自愿离开警局。朱迪找到了尼克，两人联手揭露了一个隐藏在疯狂动物城之中的惊天秘密</p>
  <p class="notesbookimg">
  <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686238460054.png" alt="疯狂动物城 Zootopia (2016)" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[寻梦环游记 Coco (2017)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-13</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-13"/>
+        <updated>2019-08-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>热爱音乐的米格尔（安东尼·冈萨雷兹 Anthony Gonzalez 配音）不幸地出生在一个视音乐为洪水猛兽的大家庭之中，一家人只盼着米格尔快快长大，好继承家里传承了数代的制鞋产业。一年一度的亡灵节即将来临，每逢这一天，去世的亲人们的魂魄便可凭借着摆在祭坛上的照片返回现世和生者团圆。在一场意外中，米格尔竟然穿越到了亡灵国度之中，在太阳升起之前，他必须得到一位亲人的祝福，否则就将会永远地留在这个世界里。米格尔决定去寻找已故的歌神德拉库斯（本杰明·布拉特 Benjamin Bratt 配音），因为他很有可能就是自己的祖父。途中，米格尔邂逅了落魄乐手埃克托（盖尔·加西亚·贝纳尔 Gael García Bernal 配音），也渐渐发现了德拉库斯隐藏已久的秘密。</p>
+ <p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686238610029.png" alt="寻梦环游记 Coco (2017)" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -1447,20 +1492,6 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[楚门的世界 The Truman Show (1998)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-16</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-16"/>
-        <updated>2019-06-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p> 楚门（金•凯瑞 Jim Carrey 饰）是一个平凡得不能再平凡的人，除了一些有些稀奇的经历之外——初恋女友突然失踪、溺水身亡的父亲忽然似乎又出现在眼前，他和绝大多数30多岁的美国男人绝无异样。这令他倍感失落。他也曾试过离开自己生活了多年的地方，但总因种种理由而不能成行。直到有一天，他忽然发觉自己似乎一直在被人跟踪，无论他走到哪里，干什么事情。这种感觉愈来愈强烈。楚门决定不惜一切代价逃离这个他生活了30多年的地方，去寻找他的初恋女友。但他却发现自己怎样也逃不出去。真相其实很残忍。</p>
- <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686238996629.png" alt="楚门的世界 The Truman Show (1998)" />
-</p>]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[无敌破坏王 Wreck-It Ralph (2012)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-11</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-11"/>
@@ -1468,6 +1499,20 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         <content type="html"><![CDATA[<p>无敌破坏王（约翰·C·赖利 John C. Reilly 配音）生活在一个80年代出品的低精度游戏中。他的设定身份是一个反派，每天的生活就是在游戏《快手阿修》中大搞破坏，其后由玩家操作的英雄人物快手阿修（杰克·麦克布瑞尔 Jack McBrayer 配音） 会及时赶到进行修补，赢得奖牌，包揽一切荣耀。身为反派，破坏王厌倦了自己的生活，眼看阿修被胜利者的光环围绕，自己却日复一日在无趣中过活，他终于决定改变。单纯的他以为只要自己也能得到一枚奖牌，就可以摆脱反派的身份，于是某日在游戏厅歇业后，破坏王偷偷离开了自己的游戏，前去闯荡其他电子游戏的世界。在途中，破坏王结识了来自《英雄使命》的冷酷队长（简·林奇 Jane Lynch 配音）和来自90年代糖果赛车游戏《甜蜜冲刺》的小女孩云妮（萨拉·丝沃曼 Sarah Silverman 配音）。后者梦想着能上场比赛，但其身份也不允许她梦想成真。破坏王所属的游戏《快手阿修》由于失去了他被认定为系统错误，如不尽快返回，则游戏就会被永久删除；而《甜蜜冲刺》的游戏世界则在悄悄酝酿着一场巨大的、威胁到整个游戏世界的阴谋。这也许是无敌破坏王实现梦想的机会，但也可能是一条不归路…… 他可以扭转乾坤，成为一名真正的英雄吗？</p>
  <p class="notesbookimg">
  <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686238313798.png" alt="无敌破坏王 Wreck-It Ralph (2012)" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[楚门的世界 The Truman Show (1998)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-16</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-16"/>
+        <updated>2019-06-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p> 楚门（金•凯瑞 Jim Carrey 饰）是一个平凡得不能再平凡的人，除了一些有些稀奇的经历之外——初恋女友突然失踪、溺水身亡的父亲忽然似乎又出现在眼前，他和绝大多数30多岁的美国男人绝无异样。这令他倍感失落。他也曾试过离开自己生活了多年的地方，但总因种种理由而不能成行。直到有一天，他忽然发觉自己似乎一直在被人跟踪，无论他走到哪里，干什么事情。这种感觉愈来愈强烈。楚门决定不惜一切代价逃离这个他生活了30多年的地方，去寻找他的初恋女友。但他却发现自己怎样也逃不出去。真相其实很残忍。</p>
+ <p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686238996629.png" alt="楚门的世界 The Truman Show (1998)" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -1531,7 +1576,7 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[侧耳倾听 耳をすませば (1995)]]></title>
+        <title type="html"><![CDATA[侧耳倾听 耳をすませば (1995)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-5</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-5"/>
         <updated>2018-07-31T16:00:00.000Z</updated>
@@ -1559,7 +1604,7 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[崖上的波妞 崖の上のポニョ (2008)]]></title>
+        <title type="html"><![CDATA[崖上的波妞 崖の上のポニョ (2008)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-8</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-8"/>
         <updated>2018-04-20T00:00:00.000Z</updated>
@@ -1587,7 +1632,7 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[西西里的美丽传说 Malèna (2000)]]></title>
+        <title type="html"><![CDATA[西西里的美丽传说 Malèna (2000)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-3</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-3"/>
         <updated>2017-10-20T00:00:00.000Z</updated>
@@ -1629,7 +1674,7 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[天空之城 天空の城ラピュタ (1986)]]></title>
+        <title type="html"><![CDATA[天空之城 天空の城ラピュタ (1986)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-6</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-6"/>
         <updated>2016-02-29T16:00:00.000Z</updated>

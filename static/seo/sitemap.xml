@@ -36,12 +36,12 @@
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/article/qianduan-2</loc>
+    <loc>https://www.zhangchengwei.work/article/qianduan-3</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/article/qianduan-3</loc>
+    <loc>https://www.zhangchengwei.work/article/qianduan-2</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
@@ -71,17 +71,17 @@
     <changefreq>always</changefreq>
   </url>
   <url>
+    <loc>https://www.zhangchengwei.work/article/blog-2</loc>
+    <priority>1.0</priority>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
     <loc>https://www.zhangchengwei.work/article/blog-4</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
   <url>
     <loc>https://www.zhangchengwei.work/article/blog-3</loc>
-    <priority>1.0</priority>
-    <changefreq>always</changefreq>
-  </url>
-  <url>
-    <loc>https://www.zhangchengwei.work/article/blog-2</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
@@ -127,6 +127,21 @@
   </url>
   <url>
     <loc>https://www.zhangchengwei.work/cv/jianli-1</loc>
+    <priority>1.0</priority>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-37</loc>
+    <priority>1.0</priority>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-38</loc>
+    <priority>1.0</priority>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-39</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
@@ -216,22 +231,22 @@
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/notesbook/dianying-23</loc>
-    <priority>1.0</priority>
-    <changefreq>always</changefreq>
-  </url>
-  <url>
     <loc>https://www.zhangchengwei.work/notesbook/dianying-25</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/notesbook/dianying-27</loc>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-23</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
   <url>
     <loc>https://www.zhangchengwei.work/notesbook/dianying-26</loc>
+    <priority>1.0</priority>
+    <changefreq>always</changefreq>
+  </url>
+  <url>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-27</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
@@ -291,12 +306,12 @@
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/notesbook/dianying-13</loc>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-12</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/notesbook/dianying-12</loc>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-13</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
@@ -306,12 +321,12 @@
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/notesbook/dianying-16</loc>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-11</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://www.zhangchengwei.work/notesbook/dianying-11</loc>
+    <loc>https://www.zhangchengwei.work/notesbook/dianying-16</loc>
     <priority>1.0</priority>
     <changefreq>always</changefreq>
   </url>

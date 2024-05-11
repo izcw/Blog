@@ -512,6 +512,7 @@ function produceHtml(globfiles) {
       function (err) {
         if (err) return console.log("sitemap.json读取失败");
         console.log("sitemap.json，写入成功");
+        console.log("-------------------《记得重启node app.js服务》-----------------------");
         process.exit(); // 执行完退出
       }
     );
