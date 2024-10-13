@@ -7,7 +7,7 @@
 ```JavaScript
 
 npm i // 安装依赖
-nodemon .\app.js // 运行
+node .\app.js // 运行
 node .\build.js // 打包
 
 ```

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.zhangchengwei.work/</id>
     <title>张成威的网络日志</title>
-    <updated>2024-05-11T06:28:11.714Z</updated>
+    <updated>2024-10-13T17:57:16.524Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>张成威</name>
@@ -48,6 +48,24 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[获取URL参数]]></title>
+        <id>https://www.zhangchengwei.work/article/qianduan-4</id>
+        <link href="https://www.zhangchengwei.work/article/qianduan-4"/>
+        <updated>2023-07-28T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<pre><code class="language-javascript">window.location.host; //返回url 的主机部分，例如：www.xxx.com 
+window.location.hostname; //返回www.xxx.com 
+window.location.href; //返回完整的url字符串
+window.location.pathname; //返回请求路径 /xxx/xxx.html
+window.location.protocol; //返回url 的协议部分，例如： http:，ftp:，maito:等等.
+window.location.port //url 返回端口
+</code></pre>
+]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[原生js网页加载状态]]></title>
         <id>https://www.zhangchengwei.work/article/qianduan-2</id>
         <link href="https://www.zhangchengwei.work/article/qianduan-2"/>
@@ -66,24 +84,6 @@
 </code></pre>
 <p>停止加载</p>
 <pre><code class="language-javascript">window.stop()
-</code></pre>
-]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[获取URL参数]]></title>
-        <id>https://www.zhangchengwei.work/article/qianduan-4</id>
-        <link href="https://www.zhangchengwei.work/article/qianduan-4"/>
-        <updated>2023-07-28T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<pre><code class="language-javascript">window.location.host; //返回url 的主机部分，例如：www.xxx.com 
-window.location.hostname; //返回www.xxx.com 
-window.location.href; //返回完整的url字符串
-window.location.pathname; //返回请求路径 /xxx/xxx.html
-window.location.protocol; //返回url 的协议部分，例如： http:，ftp:，maito:等等.
-window.location.port //url 返回端口
 </code></pre>
 ]]></content>
         <author>
@@ -309,6 +309,44 @@ node .\build.js // 打包
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[关于我]]></title>
+        <id>https://www.zhangchengwei.work/article/blog-3</id>
+        <link href="https://www.zhangchengwei.work/article/blog-3"/>
+        <updated>2023-04-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="hello-world">Hello, world</h3>
+<p>嗨，我是 张成威 Zhang Chengwei<br />&emsp;&emsp;&emsp;&emsp;&emsp;————知不足而奋进，望远山而前行。</p>
+<br />
+
+<h3 id="want-to-become？">Want to become？</h3>
+<p>&emsp;&emsp;我想成为一名自由软件开发者，对于软件我更看重使用者与程序的交互，用直觉去预判下一步我该怎么操作，而不是深度学习，正如史蒂夫·乔布斯在2007年发布会上调侃，早期时代的手机（摩托罗拉、黑莓、诺基亚等），他们的问题在于下面的40%，不管你用不用的着，这些键盘无时无刻不存在，而控制的按钮都是固定的。我们可以回头想一下现在还有多少软件保留着这些传统，一个软件被塞得满满当当，就像是我需要一个锤子，进入一个杂乱无间的仓库，要越过杂物的层层阻碍（广告），总有打不死的蟑螂在面前故意挑衅（红点），当我拿到锤子，最后还不得不拍拍灰走人。</p>
+<p>
+ <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686318728878.png"  style="width:220px !important;" alt="诺基亚"  />
+</p>
+
+<br />
+
+<p>&emsp;&emsp;每个软件都想做All in One，功能全面，却总差强人意。我比较喜欢小团队的作品，因为它们有着自己的思考与创新，使用这些软件就像是和软件的作者深度交流，这也是为什么我想成为一名自由软件开发者的原因。<br/>&emsp;&emsp;这里推荐一部纪录片<a href="https://movie.douban.com/subject/7015793/" target="_blank" rel="《独立游戏大电影》">《独立游戏大电影》</a></p>
+<a href="/notesbook/jilupian-4" target="_blank" rel="《独立游戏大电影》">
+<p>
+ <img src="https://picserver.duoyu.link/picfile/image/202306/06-1686066023242.jpg"  style="width:220px !important;" alt="《独立游戏大电影》"  />
+</p>
+ </a>
+
+<br />
+
+<h3 id="my-favorite-idol">My favorite idol</h3>
+<p style="display: flex;flex-wrap: wrap;">
+<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322167659.jpg"  style="width:220px !important;height: 100%;" alt="史蒂夫·乔布斯"  />
+
+<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322604145.jpg"  style="width:220px !important;height: 100%;" alt="雷军"  />
+</p>
+]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[小站更新日志]]></title>
         <id>https://www.zhangchengwei.work/article/blog-2</id>
         <link href="https://www.zhangchengwei.work/article/blog-2"/>
@@ -399,44 +437,6 @@ node .\build.js // 打包
 <pre><code>$ zhangchengwei -v
 v2.0.0
 </code></pre>
-]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于我]]></title>
-        <id>https://www.zhangchengwei.work/article/blog-3</id>
-        <link href="https://www.zhangchengwei.work/article/blog-3"/>
-        <updated>2023-04-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="hello-world">Hello, world</h3>
-<p>嗨，我是 张成威 Zhang Chengwei<br />&emsp;&emsp;&emsp;&emsp;&emsp;————知不足而奋进，望远山而前行。</p>
-<br />
-
-<h3 id="want-to-become？">Want to become？</h3>
-<p>&emsp;&emsp;我想成为一名自由软件开发者，对于软件我更看重使用者与程序的交互，用直觉去预判下一步我该怎么操作，而不是深度学习，正如史蒂夫·乔布斯在2007年发布会上调侃，早期时代的手机（摩托罗拉、黑莓、诺基亚等），他们的问题在于下面的40%，不管你用不用的着，这些键盘无时无刻不存在，而控制的按钮都是固定的。我们可以回头想一下现在还有多少软件保留着这些传统，一个软件被塞得满满当当，就像是我需要一个锤子，进入一个杂乱无间的仓库，要越过杂物的层层阻碍（广告），总有打不死的蟑螂在面前故意挑衅（红点），当我拿到锤子，最后还不得不拍拍灰走人。</p>
-<p>
- <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686318728878.png"  style="width:220px !important;" alt="诺基亚"  />
-</p>
-
-<br />
-
-<p>&emsp;&emsp;每个软件都想做All in One，功能全面，却总差强人意。我比较喜欢小团队的作品，因为它们有着自己的思考与创新，使用这些软件就像是和软件的作者深度交流，这也是为什么我想成为一名自由软件开发者的原因。<br/>&emsp;&emsp;这里推荐一部纪录片<a href="https://movie.douban.com/subject/7015793/" target="_blank" rel="《独立游戏大电影》">《独立游戏大电影》</a></p>
-<a href="/notesbook/jilupian-4" target="_blank" rel="《独立游戏大电影》">
-<p>
- <img src="https://picserver.duoyu.link/picfile/image/202306/06-1686066023242.jpg"  style="width:220px !important;" alt="《独立游戏大电影》"  />
-</p>
- </a>
-
-<br />
-
-<h3 id="my-favorite-idol">My favorite idol</h3>
-<p style="display: flex;flex-wrap: wrap;">
-<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322167659.jpg"  style="width:220px !important;height: 100%;" alt="史蒂夫·乔布斯"  />
-
-<img src="https://picserver.duoyu.link/picfile/image/202306/09-1686322604145.jpg"  style="width:220px !important;height: 100%;" alt="雷军"  />
-</p>
 ]]></content>
         <author>
             <name>张成威</name>
@@ -887,11 +887,11 @@ v2.0.0
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[en]]></title>
-        <id>https://www.zhangchengwei.work/cv/jianli-2</id>
-        <link href="https://www.zhangchengwei.work/cv/jianli-2"/>
+        <title type="html"><![CDATA[cn]]></title>
+        <id>https://www.zhangchengwei.work/cv/jianli-1</id>
+        <link href="https://www.zhangchengwei.work/cv/jianli-1"/>
         <updated>2023-06-10T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="hello">Hello</h1>
+        <content type="html"><![CDATA[<h1 id="你好">你好</h1>
 ]]></content>
         <author>
             <name>张成威</name>
@@ -899,11 +899,11 @@ v2.0.0
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[cn]]></title>
-        <id>https://www.zhangchengwei.work/cv/jianli-1</id>
-        <link href="https://www.zhangchengwei.work/cv/jianli-1"/>
+        <title type="html"><![CDATA[en]]></title>
+        <id>https://www.zhangchengwei.work/cv/jianli-2</id>
+        <link href="https://www.zhangchengwei.work/cv/jianli-2"/>
         <updated>2023-06-10T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="你好">你好</h1>
+        <content type="html"><![CDATA[<h1 id="hello">Hello</h1>
 ]]></content>
         <author>
             <name>张成威</name>
@@ -926,20 +926,6 @@ v2.0.0
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[好好先生 Yes Man (2008)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-38</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-38"/>
-        <updated>2024-05-04T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>已过而立之年的卡尔·阿伦（金·凯瑞 Jim Carrey 饰）虽然衣食无忧，但他的人生可谓失败透顶。三年前和妻子离婚，始终过着单身生活。他在银行工作，不过基本呈混吃等死、升迁无望的状态。生活中他拒绝和他人交往，反而更愿意窝在家里看电影，整个人生仿佛被灰色的浓雾所笼罩。在 朋友的建议下，卡尔来到一家名为“好好先生”的机构作咨询，在导师泰伦斯（特伦斯·斯坦姆普 Terence Stamp 饰）的指引下，他尝试对生活中每一个问题都以肯定的方式回答。这小小的改变令卡尔的人生天翻地覆，荣誉、金钱、机遇、爱情接踵而来，正当他信心满满之时，却发现人生并非像他想得如此简单……</p>
-<p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202405/11-1715407402935.webp" />
-</p>]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[幸福终点站 The Terminal (2004)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-39</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-39"/>
@@ -950,6 +936,20 @@ v2.0.0
  <img src="https://picserver.duoyu.link/picfile/image/202405/11-1715407587175.webp" />
 </p>
 ]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[好好先生 Yes Man (2008)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-38</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-38"/>
+        <updated>2024-05-04T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>已过而立之年的卡尔·阿伦（金·凯瑞 Jim Carrey 饰）虽然衣食无忧，但他的人生可谓失败透顶。三年前和妻子离婚，始终过着单身生活。他在银行工作，不过基本呈混吃等死、升迁无望的状态。生活中他拒绝和他人交往，反而更愿意窝在家里看电影，整个人生仿佛被灰色的浓雾所笼罩。在 朋友的建议下，卡尔来到一家名为“好好先生”的机构作咨询，在导师泰伦斯（特伦斯·斯坦姆普 Terence Stamp 饰）的指引下，他尝试对生活中每一个问题都以肯定的方式回答。这小小的改变令卡尔的人生天翻地覆，荣誉、金钱、机遇、爱情接踵而来，正当他信心满满之时，却发现人生并非像他想得如此简单……</p>
+<p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202405/11-1715407402935.webp" />
+</p>]]></content>
         <author>
             <name>张成威</name>
             <uri>https://www.zhangchengwei.work/</uri>
@@ -1080,20 +1080,6 @@ v2.0.0
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[垫底辣妹 ビリギャル (2015)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-30</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-30"/>
-        <updated>2023-05-01T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>长相甜美的高中女孩工藤沙耶加（有村架纯 饰）在家并不受父亲待见，父亲一心要把弟弟培养成棒球手，而疏于对女儿们的呵护。沙耶加所在的高中有内部升学的制度，因此她终日和小姐妹们吃喝玩乐，学习掉到了全年级倒数第一也毫不为意。温柔勤苦的妈妈（吉田羊 饰）经常被校方找去说教，她为女儿的未来焦虑万分，因此将沙耶加送到了坪田（伊藤淳史 饰）所开办的补习班。经过水平测试，沙耶加实际只有小学四年级的水平，不过开朗自信的坪田不以为意，他以特有的方式打开女孩的心防，两人很快成为好朋友。在坪田的帮助下，沙耶加对学习的态度逐渐浓厚，后来更立下了考取庆应大学的宏愿。这是丑小鸭绝地逆袭的真实故事……本片根据《年级倒数第一的辣妹一年内偏差值提升40以上并考入庆应大学的故事》改编，该书取材自真人真事，由担任影片女主角原型小林沙耶加的私塾教师坪田信贵撰写。</p>
- <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240799361.png" alt="垫底辣妹 ビリギャル (2015)" />
-</p>]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[天堂的张望 (2020)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-31</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-31"/>
@@ -1101,6 +1087,20 @@ v2.0.0
         <content type="html"><![CDATA[<p>7岁女孩张望和父亲张国华相依为命，生活虽是清贫，但还是生活的很幸福。一天张望突然流鼻血不止，去医院检查，才知得了急性白血病，治疗需要30多万的费用，筹钱无果的张国华整日以泪洗面；而张望，清楚自己的家庭情况，毅然决定放弃治疗。记者王小月得知此事，赶往张国华家中，才得知了张望的真实身世.....事件经媒体曝光后，张望引起社会各界关注，全国各地纷纷捐款资助，很快，张望的医疗费就凑够了。感受到社会爱的力量和无数陌生人的关心，也使张望变得无比坚强，她用常人难以想象的痛苦接受着治疗，并一次一次经历着鬼门关，然而就在大家都认为张望的病快要好起来的时候，张望却做了一个出乎所有人意料的决定...</p>
  <p class="notesbookimg">
  <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240897473.png" alt="天堂的张望 (2020)" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[垫底辣妹 ビリギャル (2015)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-30</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-30"/>
+        <updated>2023-05-01T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>长相甜美的高中女孩工藤沙耶加（有村架纯 饰）在家并不受父亲待见，父亲一心要把弟弟培养成棒球手，而疏于对女儿们的呵护。沙耶加所在的高中有内部升学的制度，因此她终日和小姐妹们吃喝玩乐，学习掉到了全年级倒数第一也毫不为意。温柔勤苦的妈妈（吉田羊 饰）经常被校方找去说教，她为女儿的未来焦虑万分，因此将沙耶加送到了坪田（伊藤淳史 饰）所开办的补习班。经过水平测试，沙耶加实际只有小学四年级的水平，不过开朗自信的坪田不以为意，他以特有的方式打开女孩的心防，两人很快成为好朋友。在坪田的帮助下，沙耶加对学习的态度逐渐浓厚，后来更立下了考取庆应大学的宏愿。这是丑小鸭绝地逆袭的真实故事……本片根据《年级倒数第一的辣妹一年内偏差值提升40以上并考入庆应大学的故事》改编，该书取材自真人真事，由担任影片女主角原型小林沙耶加的私塾教师坪田信贵撰写。</p>
+ <p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240799361.png" alt="垫底辣妹 ビリギャル (2015)" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -1168,7 +1168,7 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[铃芽之旅 すずめの戸締まり ]]></title>
+        <title type="html"><![CDATA[铃芽之旅 すずめの戸締まり ]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-32</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-32"/>
         <updated>2023-04-16T00:00:00.000Z</updated>
@@ -1177,20 +1177,6 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
 不久之后，日本各地的门开始一扇一扇地打开。据说，开着的门必须关上，否则灾祸将会从门的那一边降临于现世。</p>
  <p class="notesbookimg">
  <img src="https://picserver.duoyu.link/picfile/image/202306/29-1688037081982.png" alt="铃芽之旅 すずめの戸締まり " />
-</p>]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[《蓝色星球》]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/jilupian-1</id>
-        <link href="https://www.zhangchengwei.work/notesbook/jilupian-1"/>
-        <updated>2022-12-31T16:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>很喜欢&#39;大卫·爱登堡&#39;的纪录片，通过沉浸式的呈现方式聚焦植物的纪录片，为观众们展示了这个低调秘密、不为人知的植物世界。它们既能与动物形成互惠互利的关系，也可以像我们星球上的任何生物一样具有攻击性、竞争性和戏剧性。为争夺光照、空间、营养和为家族开枝散叶的机会，它们会与竞争对手、动物和元素进行致命的斗争。本片展示了跨越20多年的新发现，同时揭示了相互紧密联系的植物世界。专业摄像机使我们拥有超越人眼的能力，比以往任何时候都观察的更贴近与深入。全新的故事，前所未见的动植物行为，令人惊讶的英雄，带你从植物的角度看地球。</p>
-<p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/06-1686065660274.png" alt="蓝色星球" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -1212,13 +1198,13 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[摩登时代 Modern Times (1936)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-24</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-24"/>
-        <updated>2022-12-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>二十年代的美国处于经济萧条时期，失业率居高不下，工人受尽压榨，成为了大机器生产中的一颗螺丝钉。查理（查理·卓别林 Charles Chaplin 饰）就是一个底层市民，他在一个机器隆隆的厂房里日以继夜地工作，以赚取微薄的收入。重复繁重的工作压得他喘不过气，他把人们的鼻子当成螺丝钉来拧，卷入流水线机器的皮带里，令人苦笑不得。查理尽管贫穷，但却很善良。他在路上搭救了流浪女，和她一起生活，家里破烂却又温馨。每次身无分文的查理为了找到吃的，都会故意犯事，以便进入监牢。光景一时间有了好转，流浪女成了歌舞红星，然而好景太短暂了。</p>
- <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240078816.png" alt="摩登时代 Modern Times (1936)" />
+        <title type="html"><![CDATA[《蓝色星球》]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/jilupian-1</id>
+        <link href="https://www.zhangchengwei.work/notesbook/jilupian-1"/>
+        <updated>2022-12-31T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>很喜欢&#39;大卫·爱登堡&#39;的纪录片，通过沉浸式的呈现方式聚焦植物的纪录片，为观众们展示了这个低调秘密、不为人知的植物世界。它们既能与动物形成互惠互利的关系，也可以像我们星球上的任何生物一样具有攻击性、竞争性和戏剧性。为争夺光照、空间、营养和为家族开枝散叶的机会，它们会与竞争对手、动物和元素进行致命的斗争。本片展示了跨越20多年的新发现，同时揭示了相互紧密联系的植物世界。专业摄像机使我们拥有超越人眼的能力，比以往任何时候都观察的更贴近与深入。全新的故事，前所未见的动植物行为，令人惊讶的英雄，带你从植物的角度看地球。</p>
+<p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202306/06-1686065660274.png" alt="蓝色星球" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -1226,13 +1212,13 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[情书 Love Letter (1995)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-25</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-25"/>
-        <updated>2022-11-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>日本神户某个飘雪的冬日，渡边博子（中山美穗）在前未婚夫藤井树的两周年祭日上又一次悲痛到不能自已。正因为无法抑制住对已逝恋人的思念，渡边博子在其中学同学录里发现“藤井树” 在小樽市读书时的地址时，依循着寄发了一封本以为是发往天国的情书。不想不久渡边博子竟然收到署名为“藤井树（酒井美纪）”的回信，经过进一步了解，她知晓此藤井树是一个同她年纪相仿的女孩，且还是男友藤井树（柏原崇）少年时代的同班同学。为了多了解一些昔日恋人在中学时代的情况，渡边博子开始与女性藤井树书信往来。而藤井树在不断的回忆中，渐渐发现少年时代与她同名同姓的那个藤井树曾对自己藏了一腔柔情。</p>
+        <title type="html"><![CDATA[摩登时代 Modern Times (1936)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-24</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-24"/>
+        <updated>2022-12-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>二十年代的美国处于经济萧条时期，失业率居高不下，工人受尽压榨，成为了大机器生产中的一颗螺丝钉。查理（查理·卓别林 Charles Chaplin 饰）就是一个底层市民，他在一个机器隆隆的厂房里日以继夜地工作，以赚取微薄的收入。重复繁重的工作压得他喘不过气，他把人们的鼻子当成螺丝钉来拧，卷入流水线机器的皮带里，令人苦笑不得。查理尽管贫穷，但却很善良。他在路上搭救了流浪女，和她一起生活，家里破烂却又温馨。每次身无分文的查理为了找到吃的，都会故意犯事，以便进入监牢。光景一时间有了好转，流浪女成了歌舞红星，然而好景太短暂了。</p>
  <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240212352.png" alt="情书 Love Letter (1995)" />
+ <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240078816.png" alt="摩登时代 Modern Times (1936)" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -1275,6 +1261,20 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         <content type="html"><![CDATA[<p> 一场谋杀案使银行家安迪（蒂姆•罗宾斯 Tim Robbins 饰）蒙冤入狱，谋杀妻子及其情人的指控将囚禁他终生。在肖申克监狱的首次现身就让监狱“大哥”瑞德（摩根•弗里曼 Morgan Freeman 饰）对他另眼相看。瑞德帮助他搞到一把石锤和一幅女明星海报，两人渐成患难 之交。很快，安迪在监狱里大显其才，担当监狱图书管理员，并利用自己的金融知识帮助监狱官避税，引起了典狱长的注意，被招致麾下帮助典狱长洗黑钱。偶然一次，他得知一名新入狱的小偷能够作证帮他洗脱谋杀罪。燃起一丝希望的安迪找到了典狱长，希望他能帮自己翻案。阴险伪善的狱长假装答应安迪，背后却派人杀死小偷，让他唯一能合法出狱的希望泯灭。沮丧的安迪并没有绝望，在一个电闪雷鸣的风雨夜，一场暗藏几十年的越狱计划让他自我救赎，重获自由！老朋友瑞德在他的鼓舞和帮助下，也勇敢地奔向自由。</p>
  <p class="notesbookimg">
  <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240476289.png" alt="肖申克的救赎 The Shawshank Redemption (1994)" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[情书 Love Letter (1995)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-25</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-25"/>
+        <updated>2022-11-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>日本神户某个飘雪的冬日，渡边博子（中山美穗）在前未婚夫藤井树的两周年祭日上又一次悲痛到不能自已。正因为无法抑制住对已逝恋人的思念，渡边博子在其中学同学录里发现“藤井树” 在小樽市读书时的地址时，依循着寄发了一封本以为是发往天国的情书。不想不久渡边博子竟然收到署名为“藤井树（酒井美纪）”的回信，经过进一步了解，她知晓此藤井树是一个同她年纪相仿的女孩，且还是男友藤井树（柏原崇）少年时代的同班同学。为了多了解一些昔日恋人在中学时代的情况，渡边博子开始与女性藤井树书信往来。而藤井树在不断的回忆中，渐渐发现少年时代与她同名同姓的那个藤井树曾对自己藏了一腔柔情。</p>
+ <p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202306/09-1686240212352.png" alt="情书 Love Letter (1995)" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -1450,20 +1450,6 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[疯狂动物城 Zootopia (2016)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-12</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-12"/>
-        <updated>2019-08-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>故事发生在一个所有哺乳类动物和谐共存的美好世界中，兔子朱迪（金妮弗·古德温 Ginnifer Goodwin 配音）从小就梦想着能够成为一名惩恶扬善的刑警，凭借着智慧和努力，朱迪成功的从警校中毕业进入了疯狂动物城警察局，殊不知这里是大型肉食类动物的领地，作为第一只，也是唯一的小型食草类动物，朱迪会遇到怎样的故事呢？近日里，城中接连发生动物失踪案件，就在全部警员都致力于调查案件真相之时，朱迪却被局长（伊德瑞斯·艾尔巴 Idris Elba 配音）发配成为了一名无足轻重的交警。某日，正在执勤的兔子遇见了名为尼克（杰森·贝特曼 Jason Bateman 配音）的狐狸，两人不打不相识，之后又误打误撞的接受了寻找失踪的水獭先生的任务，如果不能在两天之内找到水獭先生，朱迪就必须自愿离开警局。朱迪找到了尼克，两人联手揭露了一个隐藏在疯狂动物城之中的惊天秘密</p>
- <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686238460054.png" alt="疯狂动物城 Zootopia (2016)" />
-</p>]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[寻梦环游记 Coco (2017)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-13</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-13"/>
@@ -1471,6 +1457,20 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         <content type="html"><![CDATA[<p>热爱音乐的米格尔（安东尼·冈萨雷兹 Anthony Gonzalez 配音）不幸地出生在一个视音乐为洪水猛兽的大家庭之中，一家人只盼着米格尔快快长大，好继承家里传承了数代的制鞋产业。一年一度的亡灵节即将来临，每逢这一天，去世的亲人们的魂魄便可凭借着摆在祭坛上的照片返回现世和生者团圆。在一场意外中，米格尔竟然穿越到了亡灵国度之中，在太阳升起之前，他必须得到一位亲人的祝福，否则就将会永远地留在这个世界里。米格尔决定去寻找已故的歌神德拉库斯（本杰明·布拉特 Benjamin Bratt 配音），因为他很有可能就是自己的祖父。途中，米格尔邂逅了落魄乐手埃克托（盖尔·加西亚·贝纳尔 Gael García Bernal 配音），也渐渐发现了德拉库斯隐藏已久的秘密。</p>
  <p class="notesbookimg">
  <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686238610029.png" alt="寻梦环游记 Coco (2017)" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[疯狂动物城 Zootopia (2016)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-12</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-12"/>
+        <updated>2019-08-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>故事发生在一个所有哺乳类动物和谐共存的美好世界中，兔子朱迪（金妮弗·古德温 Ginnifer Goodwin 配音）从小就梦想着能够成为一名惩恶扬善的刑警，凭借着智慧和努力，朱迪成功的从警校中毕业进入了疯狂动物城警察局，殊不知这里是大型肉食类动物的领地，作为第一只，也是唯一的小型食草类动物，朱迪会遇到怎样的故事呢？近日里，城中接连发生动物失踪案件，就在全部警员都致力于调查案件真相之时，朱迪却被局长（伊德瑞斯·艾尔巴 Idris Elba 配音）发配成为了一名无足轻重的交警。某日，正在执勤的兔子遇见了名为尼克（杰森·贝特曼 Jason Bateman 配音）的狐狸，两人不打不相识，之后又误打误撞的接受了寻找失踪的水獭先生的任务，如果不能在两天之内找到水獭先生，朱迪就必须自愿离开警局。朱迪找到了尼克，两人联手揭露了一个隐藏在疯狂动物城之中的惊天秘密</p>
+ <p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686238460054.png" alt="疯狂动物城 Zootopia (2016)" />
 </p>]]></content>
         <author>
             <name>张成威</name>
@@ -1548,20 +1548,6 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[千与千寻 千と千尋の神隠し (2001)]]></title>
-        <id>https://www.zhangchengwei.work/notesbook/dianying-9</id>
-        <link href="https://www.zhangchengwei.work/notesbook/dianying-9"/>
-        <updated>2018-09-20T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>千寻和爸爸妈妈一同驱车前往新家，在郊外的小路上不慎进入了神秘的隧道——他们去到了另外一个诡异世界—一个中世纪的小镇。远处飘来食物的香味，爸爸妈妈大快朵颐，孰料之后变成了猪！这时小镇上渐渐来了许多样子古怪、半透明的人。千寻仓皇逃出，一个叫小白的人救了他，喂了她阻止身体消 失的药，并且告诉她怎样去找锅炉爷爷以及汤婆婆，而且必须获得一份工作才能不被魔法变成别的东西。千寻在小白的帮助下幸运地获得了一份在浴池打杂的工作。渐渐她不再被那些怪模怪样的人吓倒，并从小玲那儿知道了小白是凶恶的汤婆婆的弟子。一次，千寻发现小白被一群白色飞舞的纸人打伤，为了救受伤的小白，她用河神送给她的药丸驱出了小白身体内的封印以及守封印的小妖精，但小白还是没有醒过来。为了救小白，千寻又踏上了她的冒险之旅。</p>
- <p class="notesbookimg">
- <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686237992508.png" alt="千与千寻 千と千尋の神隠し (2001)" />
-</p>]]></content>
-        <author>
-            <name>张成威</name>
-            <uri>https://www.zhangchengwei.work/</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[龙猫 となりのトトロ (1988)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-7</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-7"/>
@@ -1576,7 +1562,21 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[侧耳倾听 耳をすませば (1995)]]></title>
+        <title type="html"><![CDATA[千与千寻 千と千尋の神隠し (2001)]]></title>
+        <id>https://www.zhangchengwei.work/notesbook/dianying-9</id>
+        <link href="https://www.zhangchengwei.work/notesbook/dianying-9"/>
+        <updated>2018-09-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>千寻和爸爸妈妈一同驱车前往新家，在郊外的小路上不慎进入了神秘的隧道——他们去到了另外一个诡异世界—一个中世纪的小镇。远处飘来食物的香味，爸爸妈妈大快朵颐，孰料之后变成了猪！这时小镇上渐渐来了许多样子古怪、半透明的人。千寻仓皇逃出，一个叫小白的人救了他，喂了她阻止身体消 失的药，并且告诉她怎样去找锅炉爷爷以及汤婆婆，而且必须获得一份工作才能不被魔法变成别的东西。千寻在小白的帮助下幸运地获得了一份在浴池打杂的工作。渐渐她不再被那些怪模怪样的人吓倒，并从小玲那儿知道了小白是凶恶的汤婆婆的弟子。一次，千寻发现小白被一群白色飞舞的纸人打伤，为了救受伤的小白，她用河神送给她的药丸驱出了小白身体内的封印以及守封印的小妖精，但小白还是没有醒过来。为了救小白，千寻又踏上了她的冒险之旅。</p>
+ <p class="notesbookimg">
+ <img src="https://picserver.duoyu.link/picfile/image/202306/08-1686237992508.png" alt="千与千寻 千と千尋の神隠し (2001)" />
+</p>]]></content>
+        <author>
+            <name>张成威</name>
+            <uri>https://www.zhangchengwei.work/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[侧耳倾听 耳をすませば (1995)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-5</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-5"/>
         <updated>2018-07-31T16:00:00.000Z</updated>
@@ -1604,7 +1604,7 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[崖上的波妞 崖の上のポニョ (2008)]]></title>
+        <title type="html"><![CDATA[崖上的波妞 崖の上のポニョ (2008)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-8</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-8"/>
         <updated>2018-04-20T00:00:00.000Z</updated>
@@ -1632,7 +1632,7 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[西西里的美丽传说 Malèna (2000)]]></title>
+        <title type="html"><![CDATA[西西里的美丽传说 Malèna (2000)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-3</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-3"/>
         <updated>2017-10-20T00:00:00.000Z</updated>
@@ -1674,7 +1674,7 @@ Lisanne Pajot 和 James Swirsky 第一次共同制作了这部电影，他们精
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[天空之城 天空の城ラピュタ (1986)]]></title>
+        <title type="html"><![CDATA[天空之城 天空の城ラピュタ (1986)]]></title>
         <id>https://www.zhangchengwei.work/notesbook/dianying-6</id>
         <link href="https://www.zhangchengwei.work/notesbook/dianying-6"/>
         <updated>2016-02-29T16:00:00.000Z</updated>
